@@ -10,6 +10,7 @@ import os
 import datetime
 from dateutil.parser import parse
 import pandas as pd
+import copy
 
 
 class Ratings:
@@ -124,16 +125,19 @@ class Ratings:
     def create_new_data_file(self, table_data, ticker, companyName, CompanySector):
 
         # create a ne schema object
-        tickerObject = self.schema.copy()
+
         tickerObject = self.format_data(table_data, ticker, companyName, CompanySector)
 
         # write to file
         with open(os.path.join(self.dest_dir, ticker + ".json"), "w") as outfile:
             json.dump(tickerObject, outfile)
 
+        tickerObject = None
+
     def format_data(self, table_data, ticker, companyName, CompanySector):
         # create a ne schema object
-        tickerObject = self.schema.copy()
+        tickerObject = copy.deepcopy(self.schema)
+        print(tickerObject)
         tickerObject["Ticker"] = ticker
         tickerObject["Updated"] = time.strftime("%Y-%m-%d %H:%M:%S")
         tickerObject["Company"] = companyName
@@ -160,7 +164,7 @@ class Ratings:
 
     def format_existing_data(self, table_data):
         # create a ne schema object
-        tickerObject = self.schema.copy()
+        tickerObject = copy.deepcopy(self.schema)
 
         tickerObject["Updated"] = time.strftime("%Y-%m-%d %H:%M:%S")
 
