@@ -1,0 +1,148 @@
+{
+  "Ticker": "TWTR",
+  "Company": "Twitter",
+  "Sector": "Communication Services",
+  "Updated": "2021-12-27 19:40:56",
+  "Rating": [
+    {
+      "Date": "2021-12-15",
+      "Rating": "Reiterated",
+      "Organization": "JP Morgan",
+      "Rating_Change": "Overweight",
+      "Target_Change": "$86 to $70"
+    },
+    {
+      "Date": "2021-12-02",
+      "Rating": "Resumed",
+      "Organization": "UBS",
+      "Rating_Change": "Neutral",
+      "Target_Change": "$69 to $50"
+    },
+    {
+      "Date": "2021-10-27",
+      "Rating": "Reiterated",
+      "Organization": "KeyBanc Capital Markets",
+      "Rating_Change": "Overweight",
+      "Target_Change": "$81 to $70"
+    },
+    {
+      "Date": "2021-10-27",
+      "Rating": "Reiterated",
+      "Organization": "JP Morgan",
+      "Rating_Change": "Overweight",
+      "Target_Change": "$90 to $86"
+    },
+    {
+      "Date": "2021-10-27",
+      "Rating": "Reiterated",
+      "Organization": "Jefferies",
+      "Rating_Change": "Hold",
+      "Target_Change": "$80 to $70"
+    },
+    {
+      "Date": "2021-10-27",
+      "Rating": "Reiterated",
+      "Organization": "Cowen",
+      "Rating_Change": "Market Perform",
+      "Target_Change": "$64 to $67"
+    },
+    {
+      "Date": "2021-10-27",
+      "Rating": "Reiterated",
+      "Organization": "Canaccord Genuity",
+      "Rating_Change": "Hold",
+      "Target_Change": "$78 to $72"
+    },
+    {
+      "Date": "2021-10-27",
+      "Rating": "Reiterated",
+      "Organization": "BofA Securities",
+      "Rating_Change": "Buy",
+      "Target_Change": "$82 to $79"
+    },
+    {
+      "Date": "2021-10-27",
+      "Rating": "Reiterated",
+      "Organization": "BMO Capital Markets",
+      "Rating_Change": "Market Perform",
+      "Target_Change": "$70 to $65"
+    },
+    {
+      "Date": "2021-10-27",
+      "Rating": "Reiterated",
+      "Organization": "Barclays",
+      "Rating_Change": "Underweight",
+      "Target_Change": "$60 to $64"
+    },
+    {
+      "Date": "2021-09-13",
+      "Rating": "Initiated",
+      "Organization": "Goldman",
+      "Rating_Change": "Sell",
+      "Target_Change": "$60"
+    },
+    {
+      "Date": "2021-07-23",
+      "Rating": "Reiterated",
+      "Organization": "UBS",
+      "Rating_Change": "Neutral",
+      "Target_Change": "$62 to $69"
+    },
+    {
+      "Date": "2021-07-23",
+      "Rating": "Reiterated",
+      "Organization": "Truist",
+      "Rating_Change": "Buy",
+      "Target_Change": "$70 to $80"
+    },
+    {
+      "Date": "2021-07-23",
+      "Rating": "Reiterated",
+      "Organization": "Susquehanna",
+      "Rating_Change": "Positive",
+      "Target_Change": "$70 to $85"
+    },
+    {
+      "Date": "2021-07-23",
+      "Rating": "Reiterated",
+      "Organization": "Rosenblatt",
+      "Rating_Change": "Neutral",
+      "Target_Change": "$60 to $65"
+    },
+    {
+      "Date": "2021-07-23",
+      "Rating": "Reiterated",
+      "Organization": "Piper Sandler",
+      "Rating_Change": "Neutral",
+      "Target_Change": "$66 to $76"
+    },
+    {
+      "Date": "2021-07-23",
+      "Rating": "Reiterated",
+      "Organization": "Oppenheimer",
+      "Rating_Change": "Outperform",
+      "Target_Change": "$70 to $85"
+    },
+    {
+      "Date": "2021-07-23",
+      "Rating": "Reiterated",
+      "Organization": "Morgan Stanley",
+      "Rating_Change": "Equal-Weight",
+      "Target_Change": "$62 to $68"
+    },
+    {
+      "Date": "2021-07-23",
+      "Rating": "Reiterated",
+      "Organization": "Mizuho",
+      "Rating_Change": "Neutral",
+      "Target_Change": "$65 to $70"
+    },
+    {
+      "Date": "2021-07-23",
+      "Rating": "Reiterated",
+      "Organization": "KeyBanc Capital Markets",
+      "Rating_Change": "Overweight",
+      "Target_Change": "$77 to $81"
+    }
+  ]
+}

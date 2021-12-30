@@ -27,7 +27,7 @@ class Ratings:
         self.rating_shemas = {
             "Date": None,
             "Rating": None,
-            "organization": None,
+            "Organization": None,
             "Rating_Change": None,
             "Target_Change": None,
         }
@@ -46,8 +46,12 @@ class Ratings:
         for index, ticker in enumerate(tickers):
             print(ticker)
             # get raw data
-            soup = self.get_raw_data(ticker)
+            soup = self.get_raw_data(ticker, index, len(tickers))
             new_ticker_data = self.extract_table_data(soup)
+
+            if new_ticker_data is None:
+                print("No data for ticker " + ticker)
+                continue
 
             companyName = tickerNames[index]
             CompanySector = tickerSector[index]
@@ -65,16 +69,25 @@ class Ratings:
                 # compare rating data of old_data and add new data that is not in old_data
                 self.update_existing_data(existing_ticker_data, new_ticker_data, ticker)
 
-    def get_raw_data(self, ticker):
+    def get_raw_data(self, ticker, index, length):
         webpage = None
         url = "https://finviz.com/quote.ashx?t=" + str(ticker)
-
+        counter = 1
         # get random proxy
         proxy = random.choice(self.proxies)
         # make request to url via random random proxy if response is ok, get soup else try again with new proxy
         while webpage is None:
             try:
-                print("Using proxy: " + str(proxy) + " ticker " + str(ticker))
+                print(
+                    "Item "
+                    + index
+                    + " of "
+                    + length
+                    + " Using proxy: "
+                    + str(proxy)
+                    + " ticker "
+                    + str(ticker)
+                )
 
                 response = requests.get(
                     url,
@@ -83,6 +96,7 @@ class Ratings:
                     timeout=5,
                 )
                 webpage = response.content
+                counter += 1
                 time.sleep(random.randint(2, 5))
 
             except Exception as e:
@@ -108,6 +122,8 @@ class Ratings:
         table_data = []
         ## find table by class name
         table = soup.find("table", {"class": "fullview-ratings-outer"})
+        if table is None:
+            return None
 
         # extract text from each row and append as new list in table_data and remove all /n
         for row in table.findAll("tr"):
@@ -153,7 +169,7 @@ class Ratings:
                     ).date()
                 )
                 rating_schema["Rating"] = row[1]
-                rating_schema["organization"] = row[2]
+                rating_schema["Organization"] = row[2]
                 rating_schema["Rating_Change"] = row[3].replace("\u2192", "to")
                 rating_schema["Target_Change"] = row[4].replace("\u2192", "to")
                 tickerObject["Rating"][uuid.uuid4()] = rating_schema
@@ -178,7 +194,7 @@ class Ratings:
                     ).date()
                 )
                 rating_schema["Rating"] = row[1]
-                rating_schema["organization"] = row[2]
+                rating_schema["Organization"] = row[2]
                 rating_schema["Rating_Change"] = row[3].replace("\u2192", "to")
                 rating_schema["Target_Change"] = row[4].replace("\u2192", "to")
                 tickerObject["Rating"][uuid.uuid4()] = rating_schema
