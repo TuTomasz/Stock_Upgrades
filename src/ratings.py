@@ -80,9 +80,9 @@ class Ratings:
             try:
                 print(
                     "Item "
-                    + index
+                    + str(index)
                     + " of "
-                    + length
+                    + str(length)
                     + " Using proxy: "
                     + str(proxy)
                     + " ticker "
@@ -108,7 +108,7 @@ class Ratings:
             "Successfully connected to url: "
             + url
             + " via proxy: "
-            + proxy
+            + str(proxy)
             + "extracted "
             + str(len(webpage))
             + " bytes"
@@ -176,6 +176,9 @@ class Ratings:
 
         tickerObject["Rating"] = list(tickerObject["Rating"].values())
 
+        # date of last update
+        tickerObject["Updated"] = str(tickerObject["Rating"][0]["Date"])
+
         return tickerObject
 
     def format_existing_data(self, table_data):
@@ -226,6 +229,9 @@ class Ratings:
 
         for rating in existing:
             rating["Date"] = str(rating["Date"])
+
+        # date of last update
+        existing_ticker_data["Updated"] = str(existing[0]["Date"])
 
         # write to file and save in data folder
 
