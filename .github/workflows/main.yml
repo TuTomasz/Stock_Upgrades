@@ -27,6 +27,8 @@ jobs:
           architecture: x64
       - name: Change Directory
         run: cd ${{ github.workspace }}
+      - name: Package Setup
+        run: make setup
       - name: Run Lint
         run: make lint
       - name: Run Scrape
