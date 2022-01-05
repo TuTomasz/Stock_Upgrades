@@ -1,4 +1,4 @@
-.PHONY: setup build install-build uninstall-build publish clean test lint
+.PHONY: setup build install-build uninstall-build publish clean test lint run
 
 # Setup Constants
 POETRY_VERSION = 1.1.11
@@ -6,7 +6,6 @@ POETRY_VERSION = 1.1.11
 
 # Set up environment and install dependencies
 setup:
-	make clean
 	@echo Install Poetry Version $(POETRY_VERSION)
 	[ -f ./poetry.lock ] && rm -r poetry.lock || echo lock file not found
 	pip install --upgrade --force-reinstall 'poetry==$(POETRY_VERSION)'
@@ -29,3 +28,8 @@ test:
 lint:
 	@echo ♻️ Reformatting Code
 	poetry run black .
+
+run:
+	@echo 🚀 Running Procedure
+	python main.py
+
