@@ -4,9 +4,9 @@ on:
   schedule:
     - cron: "0 12 * * *"
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 
 # Set python environment
 env:
