@@ -33,5 +33,7 @@ jobs:
   
       - name: print directory
         run: pwd
+      - name: print directory
+        run: ls
       - name: Run Scrape
         run: make run
