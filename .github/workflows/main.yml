@@ -30,8 +30,7 @@ jobs:
         run: make setup
       - name: Run Lint
         run: make lint
-      - name: start shell
-        run: poetry shell
+  
       - name: print directory
         run: pwd
       - name: Run Scrape
