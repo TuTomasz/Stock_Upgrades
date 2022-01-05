@@ -25,8 +25,7 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_VERSION }}
           architecture: x64
-      - name: Change Directory
-        run: cd ${{ github.workspace }}
+      
       - name: Package Setup
         run: make setup
       - name: Run Lint
