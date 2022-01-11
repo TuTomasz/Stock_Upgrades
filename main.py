@@ -1,6 +1,11 @@
 import os
 from src.ratings import Ratings
-from src.other import readQueueFile, appendQueueFile, clearQueueFile, populateQueueFile
+from src.fileQueue import (
+    readQueueFile,
+    appendQueueFile,
+    clearQueueFile,
+    populateQueueFile,
+)
 from src.proxy_service import ProxyService
 
 dest_dir = os.path.join("Data", "Rating")
