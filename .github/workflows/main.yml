@@ -25,11 +25,18 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_VERSION }}
           architecture: x64
-      - name: Change Directory
-        run: cd ${{ github.workspace }}
+      - name: Install and configure Poetry
+        uses: snok/install-poetry@v1
+        with:
+          version: 1.1.11
       - name: Package Setup
         run: make setup
       - name: Run Lint
         run: make lint
+  
+      - name: print directory
+        run: pwd
+      - name: print directory
+        run: ls
       - name: Run Scrape
         run: make run
