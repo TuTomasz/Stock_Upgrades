@@ -2,7 +2,7 @@ name: UPDATE DATA
 
 on:
   schedule:
-    - cron: "0 12 * * *"
+    - cron: "00 15 * * 1-5"
   push:
     branches: [main]
   pull_request:
