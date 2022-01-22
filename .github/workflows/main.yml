@@ -1,8 +1,8 @@
-name: UPDATE
+name: UPDATE DATA
 
 on:
   schedule:
-    - cron: "0 12 * * *"
+    - cron: "00 15 * * 1-5"
   push:
     branches: [main]
   pull_request:
@@ -11,6 +11,7 @@ on:
 # Set python environment
 env:
   PYTHON_VERSION: 3.9.1
+  POETRY_VERSION: 1.1.11
 
 # Job Descriptions
 jobs:
@@ -25,11 +26,23 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_VERSION }}
           architecture: x64
-      - name: Change Directory
-        run: cd ${{ github.workspace }}
+      - name: Install and configure Poetry
+        uses: snok/install-poetry@v1
+        with:
+          version: ${{env.POETRY_VERSION}}
       - name: Package Setup
         run: make setup
       - name: Run Lint
         run: make lint
       - name: Run Scrape
         run: make run
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add Data/
+          git diff-index --quiet HEAD || git commit -m "Update Data files" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
