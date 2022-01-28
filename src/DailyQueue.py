@@ -1,3 +1,4 @@
+import this
 import requests
 from bs4 import BeautifulSoup
 from urllib.request import Request, urlopen
@@ -34,7 +35,23 @@ def clearQueueFile():
         f.write("")
 
 
-def populateQueueFile(file):
+def archiveQueueFile():
+    """
+    Archive queue file to the archive folder with todays date
+    """
+    with open("Data/Queue/Queue.json", "r") as f:
+        lines = f.readlines()
+    with open(
+        "Data/Archive/Daily/"
+        + datetime.datetime.today().strftime("%Y-%m-%d")
+        + ".json",
+        "w",
+    ) as f:
+        for line in lines:
+            f.write(line)
+
+
+def populateQueueFile():
 
     ticker_dir = os.path.join("Data", "Tickers", "ticker_list.csv")
     rating_dir = os.path.join("Data", "Rating")
@@ -64,7 +81,6 @@ def populateQueueFile(file):
                     "Updated": data["Updated"],
                     "Rating": {},
                 }
-                print(ticker)
                 for rating in ratings:
                     if rating["Date"] == datetime.datetime.today().strftime("%Y-%m-%d"):
 
@@ -79,11 +95,15 @@ def populateQueueFile(file):
                         schema["Rating"] = rating_shemas
 
                         appendQueueFile(json.dumps(schema) + "\n")
+
         except Exception as e:
             print(e)
+
+    # create a archived file for queue
+    archiveQueueFile()
 
 
 if __name__ == "__main__":
 
     # populate queue with new ratings that are of date today
-    populateQueueFile("data/queue/Queue.json")
+    populateQueueFile()

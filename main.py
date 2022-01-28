@@ -1,14 +1,13 @@
 import os
-from src.ratings import Ratings
-from src.fileQueue import (
-    readQueueFile,
-    appendQueueFile,
+from src.RatingsService import Ratings
+from src.DailyQueue import (
     clearQueueFile,
     populateQueueFile,
+    archiveQueueFile,
 )
-from src.proxy_service import ProxyService
+from src.ProxyService import ProxyService
 
-dest_dir = os.path.join("Data", "Rating")
+ratingsOutputPath = os.path.join("Data", "Rating")
 
 ## SETUP AND DATA MODELS
 AllProxies = []
@@ -18,13 +17,14 @@ if __name__ == "__main__":
 
     # read proxy.txt file
     proxies = ProxyService().fetchProxies()
-    print(proxies)
 
     # clear queue if one is filled
     clearQueueFile()
 
     # obtain new ratings and update
-    Ratings(dest_dir, proxies)
+    Ratings(ratingsOutputPath, proxies)
 
     # populate queue with new ratings that are of date today
-    populateQueueFile("Data/queue/rating_queue.txt")
+    populateQueueFile()
+    
+    #
