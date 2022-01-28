@@ -26,5 +26,5 @@ if __name__ == "__main__":
 
     # populate queue with new ratings that are of date today
     populateQueueFile()
-    
+
     #
