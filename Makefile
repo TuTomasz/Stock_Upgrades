@@ -33,3 +33,7 @@ run:
 	@echo 🚀 Running Procedure
 	poetry run python main.py
 
+tweet:
+	@echo Tweet insight
+	node  src/TweetService/tweet.js
+	

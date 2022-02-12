@@ -1,8 +1,10 @@
-from DailyQueue import readQueueFile
+from src.DailyQueue import readQueueFile
 import json
 import copy
+import math
+import os
+import datetime
 
-ratings = {"Downgrade": -1, "Initiated": 0, "Reiterated": 0, "Upgrade": 1, "Resumed": 0}
 
 ratingChanges = {
     "Sector Outperform to Neutral": -2,
@@ -139,57 +141,144 @@ schema = {
     "Updated": "",
     "Company": "",
     "Sector": "",
-    "Analists": [],
+    "Analists": list(),
     "Rating": "",
     "Target": "",
     "Score": 0,
 }
 
 
+def archiveInsightFile():
+    """
+    Archive queue file to the archive folder with todays date
+    """
+    with open("Data/Queue/Insight.json", "r") as f:
+        lines = f.readlines()
+    with open(
+        "Data/Archive/DailyInsight/"
+        + datetime.datetime.today().strftime("%Y-%m-%d")
+        + ".json",
+        "w",
+    ) as f:
+        for line in lines:
+            f.write(line)
+
+
+def appendInsightFile(lines):
+    """
+    Appends a list of lines to a Queue.json  file.
+    """
+    with open("Data/Queue/Insight.json", "a") as f:
+        f.write(lines)
+
+
+def getQuaterlyData(tickers):
+
+    output = dict()
+
+    for ticker in tickers:
+
+        try:
+            rating_dir = os.path.join("Data", "Rating")
+
+            with open(rating_dir + "/" + ticker + ".json", "r") as f:
+                data = json.load(f)
+
+                ratings = data["Rating"]
+
+                # remove ratings that are older then 3 months old
+                partial = [
+                    r
+                    for r in ratings
+                    if (
+                        datetime.datetime.now()
+                        - datetime.datetime.strptime(r["Date"], "%Y-%m-%d")
+                    ).days
+                    < 90
+                ]
+
+                output[ticker] = data
+                output[ticker]["Rating"] = partial
+
+        except Exception as e:
+            print(e)
+
+    return output
+
+
+def calculateScore(stocks):
+
+    for stock in stocks.values():
+
+        numberOfAnalysts = len(stocks[stock["Ticker"]]["Rating"])
+        stocks[stock["Ticker"]]["Score"] = 0
+        stocks[stock["Ticker"]]["Cumulative_Rating"] = ""
+        stocks[stock["Ticker"]]["Number_of_Analysts"] = numberOfAnalysts
+        stocks[stock["Ticker"]]["Period"] = "180 days"
+
+        for analyst in stock["Rating"]:
+
+            stocks[stock["Ticker"]]["Score"] += ratingChanges[analyst["Rating_Change"]]
+
+        stocks[stock["Ticker"]]["Score"] /= numberOfAnalysts
+
+        stocks[stock["Ticker"]]["Score"] = round(stocks[stock["Ticker"]]["Score"], 2)
+
+        score = stocks[stock["Ticker"]]["Score"]
+
+        if score < -1.5:
+            stocks[stock["Ticker"]]["Cumulative_Rating"] = "Significant Underperform"
+        elif score >= -1.5 and score < -0.5:
+            stocks[stock["Ticker"]]["Cumulative_Rating"] = "Underperform"
+        elif score >= -0.5 and score < 0.5:
+            stocks[stock["Ticker"]]["Cumulative_Rating"] = "Neutral"
+        elif score >= 0.5 and score < 1.5:
+            stocks[stock["Ticker"]]["Cumulative_Rating"] = "Outperform"
+        elif score >= 1.5:
+            stocks[stock["Ticker"]]["Cumulative_Rating"] = "Significant Outperform"
+
+
+def identifyAnalyst(stocks):
+
+    for stock in stocks.values():
+
+        analysts = set()
+
+        for analyst in stock["Rating"]:
+
+            analysts.add(analyst["Organization"])
+
+        stocks[stock["Ticker"]]["Analists"] = list(analysts)
+
+
 def generateInsight():
 
-    # read the queue file
+    # read the queue file and create stocks object
     lines = readQueueFile()
-
     stocks = dict()
-
     for line in lines:
-
         # parse json line
         json_line = json.loads(line)
-
-        stock = schema.copy()
-
+        stock = copy.deepcopy(schema)
         stock["Ticker"] = json_line["Ticker"]
         stock["Updated"] = json_line["Updated"]
         stock["Company"] = json_line["Company"]
         stock["Sector"] = json_line["Sector"]
-
         stocks[stock["Ticker"]] = stock
 
-    for line in lines:
-        # parse json line
-        json_line = json.loads(line)
+    queueTickers = list(stocks.keys())
+    quaterlyData = getQuaterlyData(queueTickers)
+    calculateScore(quaterlyData)
+    identifyAnalyst(quaterlyData)
 
-        # add reviewing organizations
-        stock = stocks[json_line["Ticker"]]
-        list = stock["Analists"]
-        print(list)
-        stock["Analists"] = list.append(json_line["Rating"]["Organization"])
-        # compute score
-        if json_line["Rating"]["Rating_Change"] in ratingChanges:
+    # write the insight file
+    for stock in quaterlyData.values():
+        appendInsightFile(json.dumps(stock) + "\n")
 
-            stocks[stock["Ticker"]]["Score"] += ratingChanges[
-                json_line["Rating"]["Rating_Change"]
-            ]
+    # archive the insight file
+    archiveInsightFile()
 
-        else:
-            pass
-
-    for stock in stocks:
-
-        # write to file
-        print(stocks[stock])
+    return quaterlyData
 
 
 if __name__ == "__main__":
