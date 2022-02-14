@@ -14,7 +14,12 @@ require("dotenv").config();
 //import file system
 const fs = require("fs");
 
-puppeteer.launch({ headless: false }).then(async (browser) => {
+// self invoking main function
+(async () => {})();
+
+chromeOptions = { headless: false, slowMo: 10 };
+
+puppeteer.launch(chromeOptions).then(async (browser) => {
   const page = await browser.newPage();
   await page.goto("https://stocktwits.com/");
 
@@ -68,9 +73,13 @@ puppeteer.launch({ headless: false }).then(async (browser) => {
 
       console.log(message);
 
-      const post = await page.$x('//*[@id="mainNavigation"]/div[3]/span/button');
+      const post = await page.$x(
+        '//*[@id="mainNavigation"]/div[3]/span/button'
+      );
       await post[0].click();
-      const box = await page.$x('//*[@id="app"]/div/div/div[4]/div[2]/div/div[2]/div/div[2]/input')
+      const box = await page.$x(
+        '//*[@id="app"]/div/div/div[4]/div[2]/div/div[2]/div/div[2]/input'
+      );
       console.log(box);
       box[0].type(message);
       break;
