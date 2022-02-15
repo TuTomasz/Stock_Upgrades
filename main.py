@@ -16,17 +16,17 @@ AllProxies = []
 
 if __name__ == "__main__":
 
-    # read proxy.txt file
-    proxies = ProxyService().fetchProxies()
+    # # read proxy.txt file
+    # proxies = ProxyService().fetchProxies()
 
-    # clear queue if one is filled
-    clearQueueFile()
+    # # clear queue if one is filled
+    # clearQueueFile()
 
-    # obtain new ratings and update
-    Ratings(ratingsOutputPath, proxies)
+    # # obtain new ratings and update
+    # Ratings(ratingsOutputPath, proxies)
 
-    # populate queue with new ratings that are of date today
-    populateQueueFile()
+    # # populate queue with new ratings that are of date today
+    # populateQueueFile()
 
     # generate insights
-    # generateInsight()
+    generateInsight()
