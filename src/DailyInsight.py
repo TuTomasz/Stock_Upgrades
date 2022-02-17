@@ -1,9 +1,11 @@
+from itertools import count
 from src.DailyQueue import readQueueFile
 import json
 import copy
 import math
 import os
 import datetime
+import re
 
 
 ratingChanges = {
@@ -251,6 +253,34 @@ def identifyAnalyst(stocks):
         stocks[stock["Ticker"]]["Analists"] = list(analysts)
 
 
+def calculatePriceTarget(stocks):
+
+    for stock in stocks.values():
+
+        target = 0
+        noTargetCount = 0
+        analysts = stock["Number_of_Analysts"]
+
+        for analyst in stock["Rating"]:
+
+            try:
+                if re.search(r"to", analyst["Target_Change"]):
+
+                    target += int(
+                        analyst["Target_Change"].split("to")[1].replace("$", "")
+                    )
+
+                else:
+                    target += int(analyst["Target_Change"].replace("$", ""))
+
+            except Exception as e:
+                noTargetCount += 1
+
+        priceTarget = target / analysts - noTargetCount
+
+        stocks[stock["Ticker"]]["Price_Target"] = round(priceTarget, 2)
+
+
 def generateInsight():
 
     # read the queue file and create stocks object
@@ -270,6 +300,7 @@ def generateInsight():
     quaterlyData = getQuaterlyData(queueTickers)
     calculateScore(quaterlyData)
     identifyAnalyst(quaterlyData)
+    calculatePriceTarget(quaterlyData)
 
     # write the insight file
     for stock in quaterlyData.values():
