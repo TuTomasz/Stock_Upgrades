@@ -33,7 +33,22 @@ run:
 	@echo 🚀 Running Procedure
 	poetry run python main.py
 
+publish:
+	@echo 📦 Publishing to twitter
+	make generate
+	make tweet
+
 tweet:
 	@echo Tweet insight
-	node  src/TweetService/tweet.js
+	cd ./src/TweetService/ && node tweet.js
+	
+generate:
+	@echo Generating Tweets
+	cd ./src/TweetService/ && node generate.js 
+
+host:
+	@echo 🏠 Running Host
+	cd ./src/TweetService/src/ && http-server -p 8080
+
+
 	
