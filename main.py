@@ -5,7 +5,7 @@ from src.DailyQueue import (
     populateQueueFile,
     archiveQueueFile,
 )
-from src.DailyInsight import generateInsight
+from src.DailyInsight import generateInsight, clearInsightFile
 from src.ProxyService import ProxyService
 
 ratingsOutputPath = os.path.join("Data", "Rating")
@@ -16,14 +16,15 @@ AllProxies = []
 
 if __name__ == "__main__":
 
-    # read proxy.txt file
-    proxies = ProxyService().fetchProxies()
+    # # read proxy.txt file
+    # proxies = ProxyService().fetchProxies()
 
     # clear queue if one is filled
     clearQueueFile()
+    clearInsightFile()
 
-    # obtain new ratings and update
-    Ratings(ratingsOutputPath, proxies)
+    # # obtain new ratings and update
+    # Ratings(ratingsOutputPath, proxies)
 
     # populate queue with new ratings that are of date today
     populateQueueFile()
