@@ -173,6 +173,7 @@ def appendInsightFile(lines):
     with open("Data/Queue/Insight.json", "a") as f:
         f.write(lines)
 
+
 def clearInsightFile():
     """
     Clears a Queue.json  file.
@@ -261,8 +262,8 @@ def identifyAnalyst(stocks):
 
 
 def calculatePriceTarget(stocks):
-     for stock in stocks.values():
-        
+    for stock in stocks.values():
+
         target = 0
         noTargetCount = 0
         analysts = stock["Number_of_Analysts"]
@@ -281,7 +282,7 @@ def calculatePriceTarget(stocks):
 
             except Exception as e:
                 noTargetCount += 1
-        
+
         priceTarget = target / analysts - noTargetCount
 
         stocks[stock["Ticker"]]["Price_Target"] = round(priceTarget, 2)

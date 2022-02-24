@@ -5,7 +5,7 @@ from src.DailyQueue import (
     populateQueueFile,
     archiveQueueFile,
 )
-from src.DailyInsight import (generateInsight, clearInsightFile)
+from src.DailyInsight import generateInsight, clearInsightFile
 from src.ProxyService import ProxyService
 
 ratingsOutputPath = os.path.join("Data", "Rating")
