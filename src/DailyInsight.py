@@ -311,9 +311,12 @@ def generateInsight():
     calculatePriceTarget(quaterlyData)
 
     # write the insight file
+    appendInsightFile("[\n")
     for stock in quaterlyData.values():
-        appendInsightFile(json.dumps(stock) + "\n")
 
+        appendInsightFile(json.dumps(stock) + "," + "\n")
+
+    appendInsightFile("]")
     # archive the insight file
     archiveInsightFile()
 
