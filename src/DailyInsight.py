@@ -166,12 +166,12 @@ def archiveInsightFile():
             f.write(line)
 
 
-def appendInsightFile(lines):
+def appendInsightFile(data):
     """
     Appends a list of lines to a Queue.json  file.
     """
     with open("Data/Queue/Insight.json", "a") as f:
-        f.write(lines)
+        f.write(json.dumps(data))
 
 
 def clearInsightFile():
@@ -311,12 +311,8 @@ def generateInsight():
     calculatePriceTarget(quaterlyData)
 
     # write the insight file
-    appendInsightFile("[\n")
-    for stock in quaterlyData.values():
+    appendInsightFile(quaterlyData)
 
-        appendInsightFile(json.dumps(stock) + "," + "\n")
-
-    appendInsightFile("]")
     # archive the insight file
     archiveInsightFile()
 

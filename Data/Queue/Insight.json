@@ -1,5 +1,5 @@
-[
-  {
+{
+  "BBWI": {
     "Ticker": "BBWI",
     "Company": "Bath & Body Works Inc.",
     "Sector": "Consumer Discretionary",
@@ -46,15 +46,15 @@
     "Number_of_Analysts": 5,
     "Period": "180 days",
     "Analists": [
-      "MKM Partners",
-      "BMO Capital Markets",
-      "JP Morgan",
       "Deutsche Bank",
+      "JP Morgan",
+      "BMO Capital Markets",
+      "MKM Partners",
       "Goldman"
     ],
     "Price_Target": 85.2
   },
-  {
+  "BKNG": {
     "Ticker": "BKNG",
     "Company": "Booking Holdings",
     "Sector": "Consumer Discretionary",
@@ -150,21 +150,21 @@
     "Number_of_Analysts": 12,
     "Period": "180 days",
     "Analists": [
-      "Loop Capital",
-      "Stifel",
-      "Evercore ISI",
-      "Credit Suisse",
-      "Jefferies",
-      "RBC Capital Mkts",
-      "Gordon Haskett",
-      "JMP Securities",
-      "JP Morgan",
       "UBS",
-      "Goldman"
+      "RBC Capital Mkts",
+      "Stifel",
+      "JP Morgan",
+      "Gordon Haskett",
+      "Loop Capital",
+      "Credit Suisse",
+      "Goldman",
+      "JMP Securities",
+      "Jefferies",
+      "Evercore ISI"
     ],
     "Price_Target": 2442.67
   },
-  {
+  "EBAY": {
     "Ticker": "EBAY",
     "Company": "eBay",
     "Sector": "Consumer Discretionary",
@@ -239,18 +239,18 @@
     "Number_of_Analysts": 9,
     "Period": "180 days",
     "Analists": [
-      "Mizuho",
-      "Stifel",
-      "Evercore ISI",
-      "JP Morgan",
       "UBS",
-      "Goldman",
+      "BofA Securities",
+      "Stifel",
+      "JP Morgan",
+      "Mizuho",
       "Piper Sandler",
-      "BofA Securities"
+      "Goldman",
+      "Evercore ISI"
     ],
     "Price_Target": 68.78
   },
-  {
+  "INTC": {
     "Ticker": "INTC",
     "Company": "Intel",
     "Sector": "Information Technology",
@@ -346,20 +346,20 @@
     "Number_of_Analysts": 12,
     "Period": "180 days",
     "Analists": [
-      "Mizuho",
-      "Credit Suisse",
-      "Citigroup",
-      "Raymond James",
-      "Barclays",
-      "Northland Capital",
       "UBS",
-      "DZ Bank",
       "BofA Securities",
-      "KeyBanc Capital Markets"
+      "Citigroup",
+      "Northland Capital",
+      "Mizuho",
+      "Barclays",
+      "KeyBanc Capital Markets",
+      "Raymond James",
+      "Credit Suisse",
+      "DZ Bank"
     ],
     "Price_Target": 44.33
   },
-  {
+  "NTAP": {
     "Ticker": "NTAP",
     "Company": "NetApp",
     "Sector": "Information Technology",
@@ -420,17 +420,17 @@
     "Number_of_Analysts": 7,
     "Period": "180 days",
     "Analists": [
-      "Cowen",
-      "Barclays",
-      "Wells Fargo",
-      "JP Morgan",
       "Deutsche Bank",
+      "BofA Securities",
+      "JP Morgan",
+      "Wells Fargo",
       "Susquehanna",
-      "BofA Securities"
+      "Barclays",
+      "Cowen"
     ],
     "Price_Target": 99.43
   },
-  {
+  "MOS": {
     "Ticker": "MOS",
     "Company": "The Mosaic Company",
     "Sector": "Materials",
@@ -462,10 +462,10 @@
     "Cumulative_Rating": "Outperform",
     "Number_of_Analysts": 3,
     "Period": "180 days",
-    "Analists": ["BMO Capital Markets", "Piper Sandler", "Berenberg"],
+    "Analists": ["Berenberg", "BMO Capital Markets", "Piper Sandler"],
     "Price_Target": 48.0
   },
-  {
+  "TJX": {
     "Ticker": "TJX",
     "Company": "TJX Companies",
     "Sector": "Consumer Discretionary",
@@ -533,17 +533,17 @@
     "Number_of_Analysts": 8,
     "Period": "180 days",
     "Analists": [
-      "Credit Suisse",
-      "Truist",
-      "Jefferies",
-      "Gordon Haskett",
       "Deutsche Bank",
+      "BofA Securities",
+      "Jefferies",
       "Citigroup",
-      "BofA Securities"
+      "Gordon Haskett",
+      "Credit Suisse",
+      "Truist"
     ],
     "Price_Target": 70.88
   },
-  {
+  "UAA": {
     "Ticker": "UAA",
     "Company": "Under Armour (Class A)",
     "Sector": "Consumer Discretionary",
@@ -625,17 +625,17 @@
     "Number_of_Analysts": 10,
     "Period": "180 days",
     "Analists": [
-      "Stifel",
-      "Morgan Stanley",
-      "Citigroup",
-      "Seaport Research Partners",
-      "Truist",
-      "BMO Capital Markets",
-      "Wells Fargo",
       "Exane BNP Paribas",
+      "Seaport Research Partners",
       "Robert W. Baird",
-      "Argus"
+      "Stifel",
+      "Citigroup",
+      "Wells Fargo",
+      "Argus",
+      "BMO Capital Markets",
+      "Truist",
+      "Morgan Stanley"
     ],
     "Price_Target": 21.8
   }
-]
+}
