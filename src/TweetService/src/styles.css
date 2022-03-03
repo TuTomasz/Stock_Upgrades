@@ -1,5 +1,19 @@
-.Container {
+body {
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: open sans, sans-serif;
+  font-size: 20px;
+  color: #454b66;
+}
+h3 {
+  font-size: 25px;
+}
+.Container {
+  width: 60%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -13,13 +27,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1%;
-  aspect-ratio: 3/4;
+  margin: 3%;
+  padding: 2%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  background-color: lightgray;
+  background-color: #ddf0fc;
   border-radius: 10px;
   box-shadow: 2px 2px 20px 4px rgba(0, 0, 0, 0.1);
 }
@@ -38,4 +52,45 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.Rating {
+  width: 85%;
+  padding: 5%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.Box {
+  width: 100%;
+  height: 33%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+}
+#Text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+
+  background-color: red;
+  border-radius: 100%;
+}
+#Field {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+.Disclamer {
+  padding: 5%;
+  font-size: 8px;
 }
