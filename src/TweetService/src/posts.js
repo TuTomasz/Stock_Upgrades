@@ -22,19 +22,23 @@ window.onload = function () {
             
             <div class="Rating">
                 <div class="Box">
-                <div id="ScoreText">Score</div>
+                <div id="Text">Analyst Score</div>
                 <div id="Score">SCORE</div>
                 </div>
                 <div class="Box">
-                <div id="ScoreText">Price Target</div>
+                <div id="Text">Price Target</div>
                 <div id="Score">PRICETARGET</div>
                 </div>
                 <div class="Box">
-                <div id="ScoreText">Number of Analysts</div>
+                <div id="Text">Number of Analysts</div>
                 <div id="Score">ANALYSTS</div>
                 </div>
                 <div class="Box">
-                <div id="ScoreText">Sentiment</div>
+                <div id="Text">Period</div>
+                <div id="Score">180 days</div>
+                </div>
+                <div class="Box">
+                <div id="Text">Sentiment</div>
                 <div id="Score">RATING</div>
                 </div>
             </div>

@@ -5,15 +5,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: open sans, sans-serif;
-  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
   color: #454b66;
 }
 h3 {
   font-size: 25px;
 }
 .Container {
-  width: 60%;
+  width: 40%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -21,6 +21,8 @@ h3 {
   align-items: center;
 }
 .Tweet {
+  min-width: 500px;
+  min-height: 280px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -28,14 +30,15 @@ h3 {
   justify-content: center;
   align-items: center;
   margin: 3%;
-  padding: 2%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: #ddf0fc;
+
   border-radius: 10px;
   box-shadow: 2px 2px 20px 4px rgba(0, 0, 0, 0.1);
+  background: url(wave.svg) no-repeat;
+  background-size: contain;
 }
 .Row {
   width: 100%;
@@ -57,7 +60,6 @@ h3 {
 .Rating {
   width: 85%;
   padding: 5%;
-  background-color: white;
   border-radius: 10px;
 }
 
@@ -67,19 +69,16 @@ h3 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: white;
   align-items: center;
 }
 #Text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
+  width: 70%;
   font-weight: bold;
-
-  background-color: red;
-  border-radius: 100%;
+  text-align: left;
+}
+#Score {
+  width: 30%;
+  text-align: left;
 }
 #Field {
   width: 100%;
@@ -91,6 +90,6 @@ h3 {
   font-weight: bold;
 }
 .Disclamer {
-  padding: 5%;
+  padding: 1%;
   font-size: 8px;
 }
