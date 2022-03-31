@@ -1,1 +1,861 @@
-{"ALNY": {"Ticker": "ALNY", "Company": "32", "Sector": "dfs", "Updated": "2022-03-01", "Rating": [{"Date": "2022-03-01", "Rating": "Initiated", "Organization": "Citigroup", "Rating_Change": "Buy", "Target_Change": "$223"}, {"Date": "2022-02-03", "Rating": "Upgrade", "Organization": "Guggenheim", "Rating_Change": "Neutral to Buy", "Target_Change": "$170"}, {"Date": "2022-01-03", "Rating": "Upgrade", "Organization": "Piper Sandler", "Rating_Change": "Neutral to Overweight", "Target_Change": "$181 to $208"}], "Score": 2.0, "Cumulative_Rating": "Significant Outperform", "Number_of_Analysts": 3, "Period": "180 days", "Analists": ["Citigroup", "Piper Sandler", "Guggenheim"], "Price_Target": 200.33}, "AMP": {"Ticker": "AMP", "Company": "Ameriprise Financial", "Sector": "Financials", "Updated": "2022-03-01", "Rating": [{"Date": "2022-03-01", "Rating": "Downgrade", "Organization": "Piper Sandler", "Rating_Change": "Overweight to Neutral", "Target_Change": "$370 to $325"}, {"Date": "2022-01-26", "Rating": "Initiated", "Organization": "Jefferies", "Rating_Change": "Buy", "Target_Change": "$355"}, {"Date": "2022-01-05", "Rating": "Upgrade", "Organization": "Evercore ISI", "Rating_Change": "In-line to Outperform", "Target_Change": "$305 to $362"}], "Score": 0.33, "Cumulative_Rating": "Neutral", "Number_of_Analysts": 3, "Period": "180 days", "Analists": ["Piper Sandler", "Evercore ISI", "Jefferies"], "Price_Target": 347.33}, "CHTR": {"Ticker": "CHTR", "Company": "Charter Communications", "Sector": "Communication Services", "Updated": "2022-03-01", "Rating": [{"Date": "2022-03-01", "Rating": "Downgrade", "Organization": "Truist", "Rating_Change": "Buy to Hold", "Target_Change": "$830 to $600"}, {"Date": "2022-01-24", "Rating": "Upgrade", "Organization": "RBC Capital Mkts", "Rating_Change": "Sector Perform to Outperform", "Target_Change": "$770 to $690"}, {"Date": "2022-01-18", "Rating": "Downgrade", "Organization": "Exane BNP Paribas", "Rating_Change": "Outperform to Neutral", "Target_Change": ""}, {"Date": "2022-01-03", "Rating": "Downgrade", "Organization": "Wolfe Research", "Rating_Change": "Peer Perform to Underperform", "Target_Change": "$712 to $621"}, {"Date": "2021-12-14", "Rating": "Downgrade", "Organization": "UBS", "Rating_Change": "Buy to Neutral", "Target_Change": "$810 to $645"}, {"Date": "2021-12-09", "Rating": "Downgrade", "Organization": "Morgan Stanley", "Rating_Change": "Overweight to Equal-Weight", "Target_Change": "$740"}], "Score": -1.0, "Cumulative_Rating": "Underperform", "Number_of_Analysts": 6, "Period": "180 days", "Analists": ["Morgan Stanley", "RBC Capital Mkts", "Truist", "Exane BNP Paribas", "Wolfe Research", "UBS"], "Price_Target": 548.33}, "CMCSA": {"Ticker": "CMCSA", "Company": "Comcast", "Sector": "Communication Services", "Updated": "2022-03-01", "Rating": [{"Date": "2022-03-01", "Rating": "Downgrade", "Organization": "Truist", "Rating_Change": "Buy to Hold", "Target_Change": ""}, {"Date": "2022-01-24", "Rating": "Upgrade", "Organization": "RBC Capital Mkts", "Rating_Change": "Sector Perform to Outperform", "Target_Change": "$60"}, {"Date": "2021-12-15", "Rating": "Downgrade", "Organization": "Citigroup", "Rating_Change": "Buy to Neutral", "Target_Change": "$60 to $53"}, {"Date": "2021-12-14", "Rating": "Downgrade", "Organization": "Macquarie", "Rating_Change": "Outperform to Neutral", "Target_Change": "$65 to $52"}], "Score": -0.75, "Cumulative_Rating": "Underperform", "Number_of_Analysts": 4, "Period": "180 days", "Analists": ["Macquarie", "RBC Capital Mkts", "Truist", "Citigroup"], "Price_Target": 40.25}, "FB": {"Ticker": "FB", "Company": "Facebook", "Sector": "Communication Services", "Updated": "2022-03-01", "Rating": [{"Date": "2022-03-01", "Rating": "Initiated", "Organization": "The Benchmark Company", "Rating_Change": "Hold", "Target_Change": ""}, {"Date": "2022-02-04", "Rating": "Downgrade", "Organization": "DZ Bank", "Rating_Change": "Hold to Sell", "Target_Change": "$225"}, {"Date": "2022-02-04", "Rating": "Downgrade", "Organization": "China Renaissance", "Rating_Change": "Buy to Hold", "Target_Change": "$415 to $280"}, {"Date": "2022-02-04", "Rating": "Downgrade", "Organization": "Argus", "Rating_Change": "Buy to Hold", "Target_Change": ""}, {"Date": "2022-02-03", "Rating": "Reiterated", "Organization": "Wolfe Research", "Rating_Change": "Outperform", "Target_Change": "$410 to $320"}, {"Date": "2022-02-03", "Rating": "Reiterated", "Organization": "Wedbush", "Rating_Change": "Neutral", "Target_Change": "$325 to $270"}, {"Date": "2022-02-03", "Rating": "Reiterated", "Organization": "UBS", "Rating_Change": "Buy", "Target_Change": "$400 to $280"}, {"Date": "2022-02-03", "Rating": "Reiterated", "Organization": "Truist", "Rating_Change": "Buy", "Target_Change": "$400 to $350"}, {"Date": "2022-02-03", "Rating": "Reiterated", "Organization": "Susquehanna", "Rating_Change": "Positive", "Target_Change": "$425 to $375"}, {"Date": "2022-02-03", "Rating": "Reiterated", "Organization": "Stifel", "Rating_Change": "Buy", "Target_Change": "$400 to $350"}, {"Date": "2022-02-03", "Rating": "Reiterated", "Organization": "Rosenblatt", "Rating_Change": "Buy", "Target_Change": "$400 to $300"}, {"Date": "2022-02-03", "Rating": "Reiterated", "Organization": "Robert W. Baird", "Rating_Change": "Outperform", "Target_Change": "$390 to $325"}, {"Date": "2022-02-03", "Rating": "Reiterated", "Organization": "RBC Capital Mkts", "Rating_Change": "Outperform", "Target_Change": "$400 to $315"}, {"Date": "2022-02-03", "Rating": "Reiterated", "Organization": "Piper Sandler", "Rating_Change": "Neutral", "Target_Change": "$385 to $301"}, {"Date": "2022-02-03", "Rating": "Reiterated", "Organization": "Oppenheimer", "Rating_Change": "Outperform", "Target_Change": "$405 to $375"}, {"Date": "2022-02-03", "Rating": "Reiterated", "Organization": "Morgan Stanley", "Rating_Change": "Overweight", "Target_Change": "$395 to $360"}, {"Date": "2022-02-03", "Rating": "Reiterated", "Organization": "Monness Crespi & Hardt", "Rating_Change": "Buy", "Target_Change": "$460 to $375"}, {"Date": "2022-02-03", "Rating": "Reiterated", "Organization": "MoffettNathanson", "Rating_Change": "Buy", "Target_Change": "$420 to $380"}, {"Date": "2022-02-03", "Rating": "Reiterated", "Organization": "Mizuho", "Rating_Change": "Buy", "Target_Change": "$450 to $425"}, {"Date": "2022-02-03", "Rating": "Reiterated", "Organization": "KeyBanc Capital Markets", "Rating_Change": "Overweight", "Target_Change": "$420 to $280"}, {"Date": "2022-02-03", "Rating": "Reiterated", "Organization": "JMP Securities", "Rating_Change": "Mkt Outperform", "Target_Change": "$400 to $350"}, {"Date": "2022-02-03", "Rating": "Reiterated", "Organization": "Jefferies", "Rating_Change": "Buy", "Target_Change": "$420 to $350"}, {"Date": "2022-02-03", "Rating": "Reiterated", "Organization": "Goldman", "Rating_Change": "Buy", "Target_Change": "$445 to $355"}, {"Date": "2022-02-03", "Rating": "Reiterated", "Organization": "Evercore ISI", "Rating_Change": "Outperform", "Target_Change": "$430 to $350"}, {"Date": "2022-02-01", "Rating": "Resumed", "Organization": "Stifel", "Rating_Change": "Buy", "Target_Change": "$400"}, {"Date": "2022-01-26", "Rating": "Reiterated", "Organization": "RBC Capital Mkts", "Rating_Change": "Outperform", "Target_Change": "$415 to $400"}, {"Date": "2021-12-06", "Rating": "Upgrade", "Organization": "HSBC Securities", "Rating_Change": "Reduce to Hold", "Target_Change": "$300"}, {"Date": "2021-12-02", "Rating": "Initiated", "Organization": "UBS", "Rating_Change": "Buy", "Target_Change": "$416 to $425"}], "Score": 1.36, "Cumulative_Rating": "Outperform", "Number_of_Analysts": 28, "Period": "180 days", "Analists": ["China Renaissance", "Argus", "Monness Crespi & Hardt", "Wedbush", "Oppenheimer", "MoffettNathanson", "Stifel", "JMP Securities", "HSBC Securities", "Robert W. Baird", "Goldman", "The Benchmark Company", "Rosenblatt", "Susquehanna", "Evercore ISI", "Piper Sandler", "Morgan Stanley", "RBC Capital Mkts", "Truist", "DZ Bank", "KeyBanc Capital Markets", "Mizuho", "Wolfe Research", "UBS", "Jefferies"], "Price_Target": 312.86}, "JKHY": {"Ticker": "JKHY", "Company": "Jack Henry & Associates", "Sector": "Information Technology", "Updated": "2022-03-01", "Rating": [{"Date": "2022-03-01", "Rating": "Upgrade", "Organization": "Oppenheimer", "Rating_Change": "Perform to Outperform", "Target_Change": "$206"}, {"Date": "2021-12-15", "Rating": "Downgrade", "Organization": "Raymond James", "Rating_Change": "Outperform to Mkt Perform", "Target_Change": ""}], "Score": -0.5, "Cumulative_Rating": "Neutral", "Number_of_Analysts": 2, "Period": "180 days", "Analists": ["Oppenheimer", "Raymond James"], "Price_Target": 102.0}, "KR": {"Ticker": "KR", "Company": "Kroger", "Sector": "Consumer Staples", "Updated": "2022-03-01", "Rating": [{"Date": "2022-03-01", "Rating": "Upgrade", "Organization": "Telsey Advisory Group", "Rating_Change": "Market Perform to Outperform", "Target_Change": "$47 to $54"}, {"Date": "2022-03-01", "Rating": "Reiterated", "Organization": "Evercore ISI", "Rating_Change": "In-line", "Target_Change": "$49 to $50"}, {"Date": "2022-01-28", "Rating": "Downgrade", "Organization": "Citigroup", "Rating_Change": "Neutral to Sell", "Target_Change": "$47 to $42"}, {"Date": "2022-01-25", "Rating": "Downgrade", "Organization": "Wells Fargo", "Rating_Change": "Equal Weight to Underweight", "Target_Change": "$42"}, {"Date": "2022-01-19", "Rating": "Upgrade", "Organization": "BofA Securities", "Rating_Change": "Underperform to Neutral", "Target_Change": "$38 to $52"}, {"Date": "2022-01-19", "Rating": "Upgrade", "Organization": "BofA Securities", "Rating_Change": "Underperform to Neutral", "Target_Change": ""}, {"Date": "2021-12-03", "Rating": "Reiterated", "Organization": "UBS", "Rating_Change": "Neutral", "Target_Change": "$44 to $48"}, {"Date": "2021-12-03", "Rating": "Reiterated", "Organization": "Telsey Advisory Group", "Rating_Change": "Market Perform", "Target_Change": "$45 to $47"}, {"Date": "2021-12-03", "Rating": "Reiterated", "Organization": "MKM Partners", "Rating_Change": "Neutral", "Target_Change": "$48 to $44"}, {"Date": "2021-12-03", "Rating": "Reiterated", "Organization": "Guggenheim", "Rating_Change": "Buy", "Target_Change": "$45 to $49"}, {"Date": "2021-12-03", "Rating": "Reiterated", "Organization": "Deutsche Bank", "Rating_Change": "Hold", "Target_Change": "$43 to $45"}, {"Date": "2021-12-03", "Rating": "Reiterated", "Organization": "Credit Suisse", "Rating_Change": "Neutral", "Target_Change": "$40 to $47"}, {"Date": "2021-12-03", "Rating": "Reiterated", "Organization": "Citigroup", "Rating_Change": "Neutral", "Target_Change": "$43 to $47"}, {"Date": "2021-12-03", "Rating": "Reiterated", "Organization": "BMO Capital Markets", "Rating_Change": "Market Perform", "Target_Change": "$39 to $41"}, {"Date": "2021-12-03", "Rating": "Reiterated", "Organization": "Barclays", "Rating_Change": "Underweight", "Target_Change": "$37 to $38"}], "Score": 0.27, "Cumulative_Rating": "Neutral", "Number_of_Analysts": 15, "Period": "180 days", "Analists": ["MKM Partners", "Citigroup", "Deutsche Bank", "Telsey Advisory Group", "BofA Securities", "Barclays", "Credit Suisse", "Evercore ISI", "Guggenheim", "UBS", "BMO Capital Markets", "Wells Fargo"], "Price_Target": 42.07}, "LNC": {"Ticker": "LNC", "Company": "Lincoln National", "Sector": "Financials", "Updated": "2022-03-01", "Rating": [{"Date": "2022-03-01", "Rating": "Downgrade", "Organization": "Goldman", "Rating_Change": "Buy to Neutral", "Target_Change": "$74"}, {"Date": "2022-01-26", "Rating": "Initiated", "Organization": "Jefferies", "Rating_Change": "Buy", "Target_Change": "$80"}, {"Date": "2022-01-21", "Rating": "Initiated", "Organization": "Wolfe Research", "Rating_Change": "Outperform", "Target_Change": "$99"}, {"Date": "2022-01-05", "Rating": "Upgrade", "Organization": "Piper Sandler", "Rating_Change": "Neutral to Overweight", "Target_Change": "$73 to $83"}, {"Date": "2022-01-05", "Rating": "Downgrade", "Organization": "Evercore ISI", "Rating_Change": "Outperform to In-line", "Target_Change": "$85 to $75"}, {"Date": "2021-12-03", "Rating": "Initiated", "Organization": "Goldman", "Rating_Change": "Buy", "Target_Change": "$88"}], "Score": 0.83, "Cumulative_Rating": "Outperform", "Number_of_Analysts": 6, "Period": "180 days", "Analists": ["Wolfe Research", "Evercore ISI", "Goldman", "Piper Sandler", "Jefferies"], "Price_Target": 83.17}, "PWR": {"Ticker": "PWR", "Company": "Quanta Services", "Sector": "Industrials", "Updated": "2022-03-01", "Rating": [{"Date": "2022-03-01", "Rating": "Upgrade", "Organization": "B. Riley Securities", "Rating_Change": "Neutral to Buy", "Target_Change": "$122 to $129"}], "Score": 2.0, "Cumulative_Rating": "Significant Outperform", "Number_of_Analysts": 1, "Period": "180 days", "Analists": ["B. Riley Securities"], "Price_Target": 129.0}, "RSG": {"Ticker": "RSG", "Company": "Republic Services", "Sector": "Industrials", "Updated": "2022-03-01", "Rating": [{"Date": "2022-03-01", "Rating": "Resumed", "Organization": "JP Morgan", "Rating_Change": "Neutral", "Target_Change": "$135"}], "Score": 0.0, "Cumulative_Rating": "Neutral", "Number_of_Analysts": 1, "Period": "180 days", "Analists": ["JP Morgan"], "Price_Target": 135.0}, "TWTR": {"Ticker": "TWTR", "Company": "Twitter", "Sector": "Communication Services", "Updated": "2022-03-01", "Rating": [{"Date": "2022-03-01", "Rating": "Initiated", "Organization": "The Benchmark Company", "Rating_Change": "Hold", "Target_Change": ""}, {"Date": "2022-02-11", "Rating": "Reiterated", "Organization": "Wolfe Research", "Rating_Change": "Peer Perform", "Target_Change": "$52 to $45"}, {"Date": "2022-02-11", "Rating": "Reiterated", "Organization": "Wedbush", "Rating_Change": "Neutral", "Target_Change": "$46 to $42"}, {"Date": "2022-02-11", "Rating": "Reiterated", "Organization": "Susquehanna", "Rating_Change": "Positive", "Target_Change": "$85 to $50"}, {"Date": "2022-02-11", "Rating": "Reiterated", "Organization": "Robert W. Baird", "Rating_Change": "Neutral", "Target_Change": "$80 to $46"}, {"Date": "2022-02-11", "Rating": "Reiterated", "Organization": "Piper Sandler", "Rating_Change": "Neutral", "Target_Change": "$54 to $46"}, {"Date": "2022-02-11", "Rating": "Reiterated", "Organization": "Oppenheimer", "Rating_Change": "Outperform", "Target_Change": "$80 to $60"}, {"Date": "2022-02-11", "Rating": "Reiterated", "Organization": "Morgan Stanley", "Rating_Change": "Equal-Weight", "Target_Change": "$57 to $59"}, {"Date": "2022-02-11", "Rating": "Reiterated", "Organization": "Mizuho", "Rating_Change": "Neutral", "Target_Change": "$56 to $46"}, {"Date": "2022-02-11", "Rating": "Reiterated", "Organization": "BofA Securities", "Rating_Change": "Buy", "Target_Change": "$79 to $54"}, {"Date": "2022-02-11", "Rating": "Reiterated", "Organization": "BMO Capital Markets", "Rating_Change": "Market Perform", "Target_Change": "$55 to $40"}, {"Date": "2022-02-11", "Rating": "Reiterated", "Organization": "Barclays", "Rating_Change": "Underweight", "Target_Change": "$64 to $34"}, {"Date": "2022-02-01", "Rating": "Resumed", "Organization": "Stifel", "Rating_Change": "Hold", "Target_Change": "$39"}, {"Date": "2021-12-15", "Rating": "Reiterated", "Organization": "JP Morgan", "Rating_Change": "Overweight", "Target_Change": "$86 to $70"}, {"Date": "2021-12-02", "Rating": "Resumed", "Organization": "UBS", "Rating_Change": "Neutral", "Target_Change": "$69 to $50"}], "Score": 0.4, "Cumulative_Rating": "Neutral", "Number_of_Analysts": 15, "Period": "180 days", "Analists": ["Morgan Stanley", "The Benchmark Company", "BofA Securities", "Barclays", "Wedbush", "Oppenheimer", "Mizuho", "JP Morgan", "Stifel", "Wolfe Research", "Susquehanna", "Robert W. Baird", "UBS", "BMO Capital Markets", "Piper Sandler"], "Price_Target": 44.4}, "VTRS": {"Ticker": "VTRS", "Company": "Viatris", "Sector": "Health Care", "Updated": "2022-03-01", "Rating": [{"Date": "2022-03-01", "Rating": "Downgrade", "Organization": "Raymond James", "Rating_Change": "Outperform to Mkt Perform", "Target_Change": ""}, {"Date": "2022-03-01", "Rating": "Downgrade", "Organization": "BofA Securities", "Rating_Change": "Buy to Neutral", "Target_Change": "$21 to $13"}], "Score": -1.5, "Cumulative_Rating": "Underperform", "Number_of_Analysts": 2, "Period": "180 days", "Analists": ["BofA Securities", "Raymond James"], "Price_Target": 5.5}, "WM": {"Ticker": "WM", "Company": "Waste Management", "Sector": "Industrials", "Updated": "2022-03-01", "Rating": [{"Date": "2022-03-01", "Rating": "Resumed", "Organization": "JP Morgan", "Rating_Change": "Neutral", "Target_Change": "$153"}], "Score": 0.0, "Cumulative_Rating": "Neutral", "Number_of_Analysts": 1, "Period": "180 days", "Analists": ["JP Morgan"], "Price_Target": 153.0}}
+{
+  "ALNY": {
+    "Ticker": "ALNY",
+    "Company": "32",
+    "Sector": "dfs",
+    "Updated": "2022-03-01",
+    "Rating": [
+      {
+        "Date": "2022-03-01",
+        "Rating": "Initiated",
+        "Organization": "Citigroup",
+        "Rating_Change": "Buy",
+        "Target_Change": "$223"
+      },
+      {
+        "Date": "2022-02-03",
+        "Rating": "Upgrade",
+        "Organization": "Guggenheim",
+        "Rating_Change": "Neutral to Buy",
+        "Target_Change": "$170"
+      },
+      {
+        "Date": "2022-01-03",
+        "Rating": "Upgrade",
+        "Organization": "Piper Sandler",
+        "Rating_Change": "Neutral to Overweight",
+        "Target_Change": "$181 to $208"
+      }
+    ],
+    "Score": 2.0,
+    "Cumulative_Rating": "Significant Outperform",
+    "Number_of_Analysts": 3,
+    "Period": "180 days",
+    "Analists": ["Citigroup", "Piper Sandler", "Guggenheim"],
+    "Price_Target": 200.33
+  },
+  "AMP": {
+    "Ticker": "AMP",
+    "Company": "Ameriprise Financial",
+    "Sector": "Financials",
+    "Updated": "2022-03-01",
+    "Rating": [
+      {
+        "Date": "2022-03-01",
+        "Rating": "Downgrade",
+        "Organization": "Piper Sandler",
+        "Rating_Change": "Overweight to Neutral",
+        "Target_Change": "$370 to $325"
+      },
+      {
+        "Date": "2022-01-26",
+        "Rating": "Initiated",
+        "Organization": "Jefferies",
+        "Rating_Change": "Buy",
+        "Target_Change": "$355"
+      },
+      {
+        "Date": "2022-01-05",
+        "Rating": "Upgrade",
+        "Organization": "Evercore ISI",
+        "Rating_Change": "In-line to Outperform",
+        "Target_Change": "$305 to $362"
+      }
+    ],
+    "Score": 0.33,
+    "Cumulative_Rating": "Neutral",
+    "Number_of_Analysts": 3,
+    "Period": "180 days",
+    "Analists": ["Piper Sandler", "Evercore ISI", "Jefferies"],
+    "Price_Target": 347.33
+  },
+  "CHTR": {
+    "Ticker": "CHTR",
+    "Company": "Charter Communications",
+    "Sector": "Communication Services",
+    "Updated": "2022-03-01",
+    "Rating": [
+      {
+        "Date": "2022-03-01",
+        "Rating": "Downgrade",
+        "Organization": "Truist",
+        "Rating_Change": "Buy to Hold",
+        "Target_Change": "$830 to $600"
+      },
+      {
+        "Date": "2022-01-24",
+        "Rating": "Upgrade",
+        "Organization": "RBC Capital Mkts",
+        "Rating_Change": "Sector Perform to Outperform",
+        "Target_Change": "$770 to $690"
+      },
+      {
+        "Date": "2022-01-18",
+        "Rating": "Downgrade",
+        "Organization": "Exane BNP Paribas",
+        "Rating_Change": "Outperform to Neutral",
+        "Target_Change": ""
+      },
+      {
+        "Date": "2022-01-03",
+        "Rating": "Downgrade",
+        "Organization": "Wolfe Research",
+        "Rating_Change": "Peer Perform to Underperform",
+        "Target_Change": "$712 to $621"
+      },
+      {
+        "Date": "2021-12-14",
+        "Rating": "Downgrade",
+        "Organization": "UBS",
+        "Rating_Change": "Buy to Neutral",
+        "Target_Change": "$810 to $645"
+      },
+      {
+        "Date": "2021-12-09",
+        "Rating": "Downgrade",
+        "Organization": "Morgan Stanley",
+        "Rating_Change": "Overweight to Equal-Weight",
+        "Target_Change": "$740"
+      }
+    ],
+    "Score": -1.0,
+    "Cumulative_Rating": "Underperform",
+    "Number_of_Analysts": 6,
+    "Period": "180 days",
+    "Analists": [
+      "Morgan Stanley",
+      "RBC Capital Mkts",
+      "Truist",
+      "Exane BNP Paribas",
+      "Wolfe Research",
+      "UBS"
+    ],
+    "Price_Target": 548.33
+  },
+  "CMCSA": {
+    "Ticker": "CMCSA",
+    "Company": "Comcast",
+    "Sector": "Communication Services",
+    "Updated": "2022-03-01",
+    "Rating": [
+      {
+        "Date": "2022-03-01",
+        "Rating": "Downgrade",
+        "Organization": "Truist",
+        "Rating_Change": "Buy to Hold",
+        "Target_Change": ""
+      },
+      {
+        "Date": "2022-01-24",
+        "Rating": "Upgrade",
+        "Organization": "RBC Capital Mkts",
+        "Rating_Change": "Sector Perform to Outperform",
+        "Target_Change": "$60"
+      },
+      {
+        "Date": "2021-12-15",
+        "Rating": "Downgrade",
+        "Organization": "Citigroup",
+        "Rating_Change": "Buy to Neutral",
+        "Target_Change": "$60 to $53"
+      },
+      {
+        "Date": "2021-12-14",
+        "Rating": "Downgrade",
+        "Organization": "Macquarie",
+        "Rating_Change": "Outperform to Neutral",
+        "Target_Change": "$65 to $52"
+      }
+    ],
+    "Score": -0.75,
+    "Cumulative_Rating": "Underperform",
+    "Number_of_Analysts": 4,
+    "Period": "180 days",
+    "Analists": ["Macquarie", "RBC Capital Mkts", "Truist", "Citigroup"],
+    "Price_Target": 40.25
+  },
+  "FB": {
+    "Ticker": "FB",
+    "Company": "Facebook",
+    "Sector": "Communication Services",
+    "Updated": "2022-03-01",
+    "Rating": [
+      {
+        "Date": "2022-03-01",
+        "Rating": "Initiated",
+        "Organization": "The Benchmark Company",
+        "Rating_Change": "Hold",
+        "Target_Change": ""
+      },
+      {
+        "Date": "2022-02-04",
+        "Rating": "Downgrade",
+        "Organization": "DZ Bank",
+        "Rating_Change": "Hold to Sell",
+        "Target_Change": "$225"
+      },
+      {
+        "Date": "2022-02-04",
+        "Rating": "Downgrade",
+        "Organization": "China Renaissance",
+        "Rating_Change": "Buy to Hold",
+        "Target_Change": "$415 to $280"
+      },
+      {
+        "Date": "2022-02-04",
+        "Rating": "Downgrade",
+        "Organization": "Argus",
+        "Rating_Change": "Buy to Hold",
+        "Target_Change": ""
+      },
+      {
+        "Date": "2022-02-03",
+        "Rating": "Reiterated",
+        "Organization": "Wolfe Research",
+        "Rating_Change": "Outperform",
+        "Target_Change": "$410 to $320"
+      },
+      {
+        "Date": "2022-02-03",
+        "Rating": "Reiterated",
+        "Organization": "Wedbush",
+        "Rating_Change": "Neutral",
+        "Target_Change": "$325 to $270"
+      },
+      {
+        "Date": "2022-02-03",
+        "Rating": "Reiterated",
+        "Organization": "UBS",
+        "Rating_Change": "Buy",
+        "Target_Change": "$400 to $280"
+      },
+      {
+        "Date": "2022-02-03",
+        "Rating": "Reiterated",
+        "Organization": "Truist",
+        "Rating_Change": "Buy",
+        "Target_Change": "$400 to $350"
+      },
+      {
+        "Date": "2022-02-03",
+        "Rating": "Reiterated",
+        "Organization": "Susquehanna",
+        "Rating_Change": "Positive",
+        "Target_Change": "$425 to $375"
+      },
+      {
+        "Date": "2022-02-03",
+        "Rating": "Reiterated",
+        "Organization": "Stifel",
+        "Rating_Change": "Buy",
+        "Target_Change": "$400 to $350"
+      },
+      {
+        "Date": "2022-02-03",
+        "Rating": "Reiterated",
+        "Organization": "Rosenblatt",
+        "Rating_Change": "Buy",
+        "Target_Change": "$400 to $300"
+      },
+      {
+        "Date": "2022-02-03",
+        "Rating": "Reiterated",
+        "Organization": "Robert W. Baird",
+        "Rating_Change": "Outperform",
+        "Target_Change": "$390 to $325"
+      },
+      {
+        "Date": "2022-02-03",
+        "Rating": "Reiterated",
+        "Organization": "RBC Capital Mkts",
+        "Rating_Change": "Outperform",
+        "Target_Change": "$400 to $315"
+      },
+      {
+        "Date": "2022-02-03",
+        "Rating": "Reiterated",
+        "Organization": "Piper Sandler",
+        "Rating_Change": "Neutral",
+        "Target_Change": "$385 to $301"
+      },
+      {
+        "Date": "2022-02-03",
+        "Rating": "Reiterated",
+        "Organization": "Oppenheimer",
+        "Rating_Change": "Outperform",
+        "Target_Change": "$405 to $375"
+      },
+      {
+        "Date": "2022-02-03",
+        "Rating": "Reiterated",
+        "Organization": "Morgan Stanley",
+        "Rating_Change": "Overweight",
+        "Target_Change": "$395 to $360"
+      },
+      {
+        "Date": "2022-02-03",
+        "Rating": "Reiterated",
+        "Organization": "Monness Crespi & Hardt",
+        "Rating_Change": "Buy",
+        "Target_Change": "$460 to $375"
+      },
+      {
+        "Date": "2022-02-03",
+        "Rating": "Reiterated",
+        "Organization": "MoffettNathanson",
+        "Rating_Change": "Buy",
+        "Target_Change": "$420 to $380"
+      },
+      {
+        "Date": "2022-02-03",
+        "Rating": "Reiterated",
+        "Organization": "Mizuho",
+        "Rating_Change": "Buy",
+        "Target_Change": "$450 to $425"
+      },
+      {
+        "Date": "2022-02-03",
+        "Rating": "Reiterated",
+        "Organization": "KeyBanc Capital Markets",
+        "Rating_Change": "Overweight",
+        "Target_Change": "$420 to $280"
+      },
+      {
+        "Date": "2022-02-03",
+        "Rating": "Reiterated",
+        "Organization": "JMP Securities",
+        "Rating_Change": "Mkt Outperform",
+        "Target_Change": "$400 to $350"
+      },
+      {
+        "Date": "2022-02-03",
+        "Rating": "Reiterated",
+        "Organization": "Jefferies",
+        "Rating_Change": "Buy",
+        "Target_Change": "$420 to $350"
+      },
+      {
+        "Date": "2022-02-03",
+        "Rating": "Reiterated",
+        "Organization": "Goldman",
+        "Rating_Change": "Buy",
+        "Target_Change": "$445 to $355"
+      },
+      {
+        "Date": "2022-02-03",
+        "Rating": "Reiterated",
+        "Organization": "Evercore ISI",
+        "Rating_Change": "Outperform",
+        "Target_Change": "$430 to $350"
+      },
+      {
+        "Date": "2022-02-01",
+        "Rating": "Resumed",
+        "Organization": "Stifel",
+        "Rating_Change": "Buy",
+        "Target_Change": "$400"
+      },
+      {
+        "Date": "2022-01-26",
+        "Rating": "Reiterated",
+        "Organization": "RBC Capital Mkts",
+        "Rating_Change": "Outperform",
+        "Target_Change": "$415 to $400"
+      },
+      {
+        "Date": "2021-12-06",
+        "Rating": "Upgrade",
+        "Organization": "HSBC Securities",
+        "Rating_Change": "Reduce to Hold",
+        "Target_Change": "$300"
+      },
+      {
+        "Date": "2021-12-02",
+        "Rating": "Initiated",
+        "Organization": "UBS",
+        "Rating_Change": "Buy",
+        "Target_Change": "$416 to $425"
+      }
+    ],
+    "Score": 1.36,
+    "Cumulative_Rating": "Outperform",
+    "Number_of_Analysts": 28,
+    "Period": "180 days",
+    "Analists": [
+      "China Renaissance",
+      "Argus",
+      "Monness Crespi & Hardt",
+      "Wedbush",
+      "Oppenheimer",
+      "MoffettNathanson",
+      "Stifel",
+      "JMP Securities",
+      "HSBC Securities",
+      "Robert W. Baird",
+      "Goldman",
+      "The Benchmark Company",
+      "Rosenblatt",
+      "Susquehanna",
+      "Evercore ISI",
+      "Piper Sandler",
+      "Morgan Stanley",
+      "RBC Capital Mkts",
+      "Truist",
+      "DZ Bank",
+      "KeyBanc Capital Markets",
+      "Mizuho",
+      "Wolfe Research",
+      "UBS",
+      "Jefferies"
+    ],
+    "Price_Target": 312.86
+  },
+  "JKHY": {
+    "Ticker": "JKHY",
+    "Company": "Jack Henry & Associates",
+    "Sector": "Information Technology",
+    "Updated": "2022-03-01",
+    "Rating": [
+      {
+        "Date": "2022-03-01",
+        "Rating": "Upgrade",
+        "Organization": "Oppenheimer",
+        "Rating_Change": "Perform to Outperform",
+        "Target_Change": "$206"
+      },
+      {
+        "Date": "2021-12-15",
+        "Rating": "Downgrade",
+        "Organization": "Raymond James",
+        "Rating_Change": "Outperform to Mkt Perform",
+        "Target_Change": ""
+      }
+    ],
+    "Score": -0.5,
+    "Cumulative_Rating": "Neutral",
+    "Number_of_Analysts": 2,
+    "Period": "180 days",
+    "Analists": ["Oppenheimer", "Raymond James"],
+    "Price_Target": 102.0
+  },
+  "KR": {
+    "Ticker": "KR",
+    "Company": "Kroger",
+    "Sector": "Consumer Staples",
+    "Updated": "2022-03-01",
+    "Rating": [
+      {
+        "Date": "2022-03-01",
+        "Rating": "Upgrade",
+        "Organization": "Telsey Advisory Group",
+        "Rating_Change": "Market Perform to Outperform",
+        "Target_Change": "$47 to $54"
+      },
+      {
+        "Date": "2022-03-01",
+        "Rating": "Reiterated",
+        "Organization": "Evercore ISI",
+        "Rating_Change": "In-line",
+        "Target_Change": "$49 to $50"
+      },
+      {
+        "Date": "2022-01-28",
+        "Rating": "Downgrade",
+        "Organization": "Citigroup",
+        "Rating_Change": "Neutral to Sell",
+        "Target_Change": "$47 to $42"
+      },
+      {
+        "Date": "2022-01-25",
+        "Rating": "Downgrade",
+        "Organization": "Wells Fargo",
+        "Rating_Change": "Equal Weight to Underweight",
+        "Target_Change": "$42"
+      },
+      {
+        "Date": "2022-01-19",
+        "Rating": "Upgrade",
+        "Organization": "BofA Securities",
+        "Rating_Change": "Underperform to Neutral",
+        "Target_Change": "$38 to $52"
+      },
+      {
+        "Date": "2022-01-19",
+        "Rating": "Upgrade",
+        "Organization": "BofA Securities",
+        "Rating_Change": "Underperform to Neutral",
+        "Target_Change": ""
+      },
+      {
+        "Date": "2021-12-03",
+        "Rating": "Reiterated",
+        "Organization": "UBS",
+        "Rating_Change": "Neutral",
+        "Target_Change": "$44 to $48"
+      },
+      {
+        "Date": "2021-12-03",
+        "Rating": "Reiterated",
+        "Organization": "Telsey Advisory Group",
+        "Rating_Change": "Market Perform",
+        "Target_Change": "$45 to $47"
+      },
+      {
+        "Date": "2021-12-03",
+        "Rating": "Reiterated",
+        "Organization": "MKM Partners",
+        "Rating_Change": "Neutral",
+        "Target_Change": "$48 to $44"
+      },
+      {
+        "Date": "2021-12-03",
+        "Rating": "Reiterated",
+        "Organization": "Guggenheim",
+        "Rating_Change": "Buy",
+        "Target_Change": "$45 to $49"
+      },
+      {
+        "Date": "2021-12-03",
+        "Rating": "Reiterated",
+        "Organization": "Deutsche Bank",
+        "Rating_Change": "Hold",
+        "Target_Change": "$43 to $45"
+      },
+      {
+        "Date": "2021-12-03",
+        "Rating": "Reiterated",
+        "Organization": "Credit Suisse",
+        "Rating_Change": "Neutral",
+        "Target_Change": "$40 to $47"
+      },
+      {
+        "Date": "2021-12-03",
+        "Rating": "Reiterated",
+        "Organization": "Citigroup",
+        "Rating_Change": "Neutral",
+        "Target_Change": "$43 to $47"
+      },
+      {
+        "Date": "2021-12-03",
+        "Rating": "Reiterated",
+        "Organization": "BMO Capital Markets",
+        "Rating_Change": "Market Perform",
+        "Target_Change": "$39 to $41"
+      },
+      {
+        "Date": "2021-12-03",
+        "Rating": "Reiterated",
+        "Organization": "Barclays",
+        "Rating_Change": "Underweight",
+        "Target_Change": "$37 to $38"
+      }
+    ],
+    "Score": 0.27,
+    "Cumulative_Rating": "Neutral",
+    "Number_of_Analysts": 15,
+    "Period": "180 days",
+    "Analists": [
+      "MKM Partners",
+      "Citigroup",
+      "Deutsche Bank",
+      "Telsey Advisory Group",
+      "BofA Securities",
+      "Barclays",
+      "Credit Suisse",
+      "Evercore ISI",
+      "Guggenheim",
+      "UBS",
+      "BMO Capital Markets",
+      "Wells Fargo"
+    ],
+    "Price_Target": 42.07
+  },
+  "LNC": {
+    "Ticker": "LNC",
+    "Company": "Lincoln National",
+    "Sector": "Financials",
+    "Updated": "2022-03-01",
+    "Rating": [
+      {
+        "Date": "2022-03-01",
+        "Rating": "Downgrade",
+        "Organization": "Goldman",
+        "Rating_Change": "Buy to Neutral",
+        "Target_Change": "$74"
+      },
+      {
+        "Date": "2022-01-26",
+        "Rating": "Initiated",
+        "Organization": "Jefferies",
+        "Rating_Change": "Buy",
+        "Target_Change": "$80"
+      },
+      {
+        "Date": "2022-01-21",
+        "Rating": "Initiated",
+        "Organization": "Wolfe Research",
+        "Rating_Change": "Outperform",
+        "Target_Change": "$99"
+      },
+      {
+        "Date": "2022-01-05",
+        "Rating": "Upgrade",
+        "Organization": "Piper Sandler",
+        "Rating_Change": "Neutral to Overweight",
+        "Target_Change": "$73 to $83"
+      },
+      {
+        "Date": "2022-01-05",
+        "Rating": "Downgrade",
+        "Organization": "Evercore ISI",
+        "Rating_Change": "Outperform to In-line",
+        "Target_Change": "$85 to $75"
+      },
+      {
+        "Date": "2021-12-03",
+        "Rating": "Initiated",
+        "Organization": "Goldman",
+        "Rating_Change": "Buy",
+        "Target_Change": "$88"
+      }
+    ],
+    "Score": 0.83,
+    "Cumulative_Rating": "Outperform",
+    "Number_of_Analysts": 6,
+    "Period": "180 days",
+    "Analists": [
+      "Wolfe Research",
+      "Evercore ISI",
+      "Goldman",
+      "Piper Sandler",
+      "Jefferies"
+    ],
+    "Price_Target": 83.17
+  },
+  "PWR": {
+    "Ticker": "PWR",
+    "Company": "Quanta Services",
+    "Sector": "Industrials",
+    "Updated": "2022-03-01",
+    "Rating": [
+      {
+        "Date": "2022-03-01",
+        "Rating": "Upgrade",
+        "Organization": "B. Riley Securities",
+        "Rating_Change": "Neutral to Buy",
+        "Target_Change": "$122 to $129"
+      }
+    ],
+    "Score": 2.0,
+    "Cumulative_Rating": "Significant Outperform",
+    "Number_of_Analysts": 1,
+    "Period": "180 days",
+    "Analists": ["B. Riley Securities"],
+    "Price_Target": 129.0
+  },
+  "RSG": {
+    "Ticker": "RSG",
+    "Company": "Republic Services",
+    "Sector": "Industrials",
+    "Updated": "2022-03-01",
+    "Rating": [
+      {
+        "Date": "2022-03-01",
+        "Rating": "Resumed",
+        "Organization": "JP Morgan",
+        "Rating_Change": "Neutral",
+        "Target_Change": "$135"
+      }
+    ],
+    "Score": 0.0,
+    "Cumulative_Rating": "Neutral",
+    "Number_of_Analysts": 1,
+    "Period": "180 days",
+    "Analists": ["JP Morgan"],
+    "Price_Target": 135.0
+  },
+  "TWTR": {
+    "Ticker": "TWTR",
+    "Company": "Twitter",
+    "Sector": "Communication Services",
+    "Updated": "2022-03-01",
+    "Rating": [
+      {
+        "Date": "2022-03-01",
+        "Rating": "Initiated",
+        "Organization": "The Benchmark Company",
+        "Rating_Change": "Hold",
+        "Target_Change": ""
+      },
+      {
+        "Date": "2022-02-11",
+        "Rating": "Reiterated",
+        "Organization": "Wolfe Research",
+        "Rating_Change": "Peer Perform",
+        "Target_Change": "$52 to $45"
+      },
+      {
+        "Date": "2022-02-11",
+        "Rating": "Reiterated",
+        "Organization": "Wedbush",
+        "Rating_Change": "Neutral",
+        "Target_Change": "$46 to $42"
+      },
+      {
+        "Date": "2022-02-11",
+        "Rating": "Reiterated",
+        "Organization": "Susquehanna",
+        "Rating_Change": "Positive",
+        "Target_Change": "$85 to $50"
+      },
+      {
+        "Date": "2022-02-11",
+        "Rating": "Reiterated",
+        "Organization": "Robert W. Baird",
+        "Rating_Change": "Neutral",
+        "Target_Change": "$80 to $46"
+      },
+      {
+        "Date": "2022-02-11",
+        "Rating": "Reiterated",
+        "Organization": "Piper Sandler",
+        "Rating_Change": "Neutral",
+        "Target_Change": "$54 to $46"
+      },
+      {
+        "Date": "2022-02-11",
+        "Rating": "Reiterated",
+        "Organization": "Oppenheimer",
+        "Rating_Change": "Outperform",
+        "Target_Change": "$80 to $60"
+      },
+      {
+        "Date": "2022-02-11",
+        "Rating": "Reiterated",
+        "Organization": "Morgan Stanley",
+        "Rating_Change": "Equal-Weight",
+        "Target_Change": "$57 to $59"
+      },
+      {
+        "Date": "2022-02-11",
+        "Rating": "Reiterated",
+        "Organization": "Mizuho",
+        "Rating_Change": "Neutral",
+        "Target_Change": "$56 to $46"
+      },
+      {
+        "Date": "2022-02-11",
+        "Rating": "Reiterated",
+        "Organization": "BofA Securities",
+        "Rating_Change": "Buy",
+        "Target_Change": "$79 to $54"
+      },
+      {
+        "Date": "2022-02-11",
+        "Rating": "Reiterated",
+        "Organization": "BMO Capital Markets",
+        "Rating_Change": "Market Perform",
+        "Target_Change": "$55 to $40"
+      },
+      {
+        "Date": "2022-02-11",
+        "Rating": "Reiterated",
+        "Organization": "Barclays",
+        "Rating_Change": "Underweight",
+        "Target_Change": "$64 to $34"
+      },
+      {
+        "Date": "2022-02-01",
+        "Rating": "Resumed",
+        "Organization": "Stifel",
+        "Rating_Change": "Hold",
+        "Target_Change": "$39"
+      },
+      {
+        "Date": "2021-12-15",
+        "Rating": "Reiterated",
+        "Organization": "JP Morgan",
+        "Rating_Change": "Overweight",
+        "Target_Change": "$86 to $70"
+      },
+      {
+        "Date": "2021-12-02",
+        "Rating": "Resumed",
+        "Organization": "UBS",
+        "Rating_Change": "Neutral",
+        "Target_Change": "$69 to $50"
+      }
+    ],
+    "Score": 0.4,
+    "Cumulative_Rating": "Neutral",
+    "Number_of_Analysts": 15,
+    "Period": "180 days",
+    "Analists": [
+      "Morgan Stanley",
+      "The Benchmark Company",
+      "BofA Securities",
+      "Barclays",
+      "Wedbush",
+      "Oppenheimer",
+      "Mizuho",
+      "JP Morgan",
+      "Stifel",
+      "Wolfe Research",
+      "Susquehanna",
+      "Robert W. Baird",
+      "UBS",
+      "BMO Capital Markets",
+      "Piper Sandler"
+    ],
+    "Price_Target": 44.4
+  },
+  "VTRS": {
+    "Ticker": "VTRS",
+    "Company": "Viatris",
+    "Sector": "Health Care",
+    "Updated": "2022-03-01",
+    "Rating": [
+      {
+        "Date": "2022-03-01",
+        "Rating": "Downgrade",
+        "Organization": "Raymond James",
+        "Rating_Change": "Outperform to Mkt Perform",
+        "Target_Change": ""
+      },
+      {
+        "Date": "2022-03-01",
+        "Rating": "Downgrade",
+        "Organization": "BofA Securities",
+        "Rating_Change": "Buy to Neutral",
+        "Target_Change": "$21 to $13"
+      }
+    ],
+    "Score": -1.5,
+    "Cumulative_Rating": "Underperform",
+    "Number_of_Analysts": 2,
+    "Period": "180 days",
+    "Analists": ["BofA Securities", "Raymond James"],
+    "Price_Target": 5.5
+  },
+  "WM": {
+    "Ticker": "WM",
+    "Company": "Waste Management",
+    "Sector": "Industrials",
+    "Updated": "2022-03-01",
+    "Rating": [
+      {
+        "Date": "2022-03-01",
+        "Rating": "Resumed",
+        "Organization": "JP Morgan",
+        "Rating_Change": "Neutral",
+        "Target_Change": "$153"
+      }
+    ],
+    "Score": 0.0,
+    "Cumulative_Rating": "Neutral",
+    "Number_of_Analysts": 1,
+    "Period": "180 days",
+    "Analists": ["JP Morgan"],
+    "Price_Target": 153.0
+  }
+}
