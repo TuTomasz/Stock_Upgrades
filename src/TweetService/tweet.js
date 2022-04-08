@@ -1,5 +1,6 @@
 const puppeteer = require("puppeteer-extra");
 
+
 // Add stealth plugin and use defaults (all tricks to hide puppeteer usage)
 const StealthPlugin = require("puppeteer-extra-plugin-stealth");
 puppeteer.use(StealthPlugin());
@@ -92,7 +93,22 @@ const fs = require("fs");
         );
         console.log(box);
         box[0].type(message);
+ 
+
+        const upload = await page.$x(`//*[@id="app"]/div/div/div[4]/div[2]/div/div[2]/div/div[2]/div[2]/div/div[2]/span/div`)
+        let path = `./Tweets/ABBV.png`
+        console.log(upload);
+      
+
+        const [fileChooser] = await Promise.all([
+          console.log("Uploading file..."),
+          page.waitForFileChooser(),
+          page.click(upload),
+        ]);
+        await fileChooser.accept([`./Tweets/ABBV.png`]);
+
         break;
+
       }
     } catch (error) {
       console.log(error);
