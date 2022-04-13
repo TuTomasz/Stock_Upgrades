@@ -78,36 +78,57 @@ const fs = require("fs");
       .split("\n");
 
     try {
+
+     
+        
+
+
       for (const rating of queue) {
+
+        await page.goto("https://stocktwits.com/UpgradeDowngrade");
         let ratingObject = await JSON.parse(rating);
-        let message = `$${ratingObject.Ticker} ${ratingObject.Rating.Organization} has changed rating to ${ratingObject.Rating.Rating} with a price target change of ${ratingObject.Rating.Target_Change}`;
-
-        console.log(message);
-
+        let message = `${ratingObject.Ticker}`;
+        
+        // click on the post button
         const post = await page.$x(
           '//*[@id="mainNavigation"]/div[3]/span/button'
         );
         await post[0].click();
+       
+        // clear text in post box
         const box = await page.$x(
-          '//*[@id="app"]/div/div/div[4]/div[2]/div/div[2]/div/div[2]/input'
+          `//*[@id="app"]/div/div/div[3]/div[2]/div/div[2]/div/div[2]/input`
         );
-        console.log(box);
-        box[0].type(message);
- 
+        for (let i = 0; i < 25; i++) {
+          await page.keyboard.press('Backspace');
+        }
 
-        const upload = await page.$x(`//*[@id="app"]/div/div/div[4]/div[2]/div/div[2]/div/div[2]/div[2]/div/div[2]/span/div`)
-        let path = `./Tweets/ABBV.png`
-        console.log(upload);
+        // type message
+        await box[0].type(message);
+
+
+
+        const inputbtn = await page.$x(`//*[@id="app"]/div/div/div[3]/div[2]/div/div[2]/div/div[2]/div[2]/div/div[2]`);
+        await inputbtn[0].click();
+
+        const elementHandle = await page.$("input[type=file]");
+        await elementHandle.uploadFile('./tweets/ABBV.png');
+
+        const postButton = await page.$x(`//*[@id="app"]/div/div/div[3]/div[2]/div/div[2]/div/div[3]/div[1]/button`);
+        await postButton[0].click();
+
+
+        // const[fileChooser] = await Promise.all([
+        //   page.waitForFileChooser(),
+        //   page.click(inputbtn[0]),
+        // ])
+        
+        // await fileChooser.accept(['./tweets/ABBV.png']);
+
+ 
       
 
-        const [fileChooser] = await Promise.all([
-          console.log("Uploading file..."),
-          page.waitForFileChooser(),
-          page.click(upload),
-        ]);
-        await fileChooser.accept([`./Tweets/ABBV.png`]);
-
-        break;
+ 
 
       }
     } catch (error) {
