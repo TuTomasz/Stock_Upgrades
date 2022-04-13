@@ -4,6 +4,8 @@ const puppeteer = require("puppeteer-extra");
 const StealthPlugin = require("puppeteer-extra-plugin-stealth");
 puppeteer.use(StealthPlugin());
 
+const RecaptchaPlugin = require('puppeteer-extra-plugin-recaptcha')
+
 // Add adblocker plugin to block all ads and trackers (saves bandwidth)
 const AdblockerPlugin = require("puppeteer-extra-plugin-adblocker");
 puppeteer.use(AdblockerPlugin({ blockTrackers: true }));
@@ -13,6 +15,17 @@ require("dotenv").config();
 
 //import file system
 const fs = require("fs");
+
+//RecaptchaPlugin
+puppeteer.use(
+  RecaptchaPlugin({
+    provider: {
+      id: '2captcha',
+      token: process.env.CAPTCHA_KEY,
+    },
+    visualFeedback: true // colorize reCAPTCHAs (violet = detected, green = solved)
+  })
+);
 
 // self invoking main function
 (async () => {
@@ -55,10 +68,9 @@ const fs = require("fs");
     );
     password[0].type(process.env.PASSWORD);
 
-    // CAPCHA problem need manual validation
-    // const frame = await page.frames().find(f => f.name().startsWith("a-"));
-    // await frame.waitForSelector('div.recaptcha-checkbox-border').click();
-    // console.log("Captcha clicked exists!");
+    // capcha solved
+    await page.solveRecaptchas();
+    
 
     await page.waitForNavigation();
 
@@ -80,7 +92,7 @@ const fs = require("fs");
       for (const rating of queue) {
         await page.goto("https://stocktwits.com/UpgradeDowngrade");
         let ratingObject = await JSON.parse(rating);
-        let message = `$${ratingObject.Ticker} ${ratingObject.Rating.Organization} has changed rating to ${ratingObject.Rating.Rating} see what the current sentiment is.`;
+        let message = `$${ratingObject.Ticker} ${ratingObject.Rating.Organization} has altered their rating to "${ratingObject.Rating.Rating}" see updated analyst outlook`;
 
         // click on the post button
         const post = await page.$x(

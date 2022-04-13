@@ -31,19 +31,17 @@ const fs = require("fs");
     const page = await browser.newPage();
     await page.goto("http://127.0.0.1:8080");
 
-    // wait forh page to load
+    // wait for page to load
     await page.waitForSelector(".Container");
 
     const elHandleArray = await page.$$(".Tweet");
+
     for (let el of elHandleArray) {
       const id = await el.evaluate((el) => el.id);
-      const analists = await el.evaluate((el) => el.id);
-   
-      await page.waitFor(Math.random() * (3000 - 1000) + 1000);
-
-      el.screenshot({ path: `./Tweets/${id}.png` });
-    }
     
+      // generate insight png
+      await el.screenshot({ path: `./Tweets/${id}.png` });
+    }
     await browser.close();
   });
 })();
