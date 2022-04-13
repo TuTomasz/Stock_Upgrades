@@ -44,7 +44,6 @@ const fs = require("fs");
       el.screenshot({ path: `./Tweets/${id}.png` });
     }
     
-
     await browser.close();
   });
 })();

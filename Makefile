@@ -12,38 +12,35 @@ setup:
 	@echo 🧰 Installing  Dependencies 
 	poetry install
 
- 
+# clean data 
 clean:
 	@echo 🧹 cleanup
 	rm -r ./Data/Rating/*.json || echo dir file not found
-
-# run unit tests
-test:
-	@echo 🧪 Running Tests
-	poetry run pytest tests/
-	@echo 🧪 Type Checks with MyPy
-	poetry run mypy python_datastructures/
 
 # format code
 lint:
 	@echo ♻️ Reformatting Code
 	poetry run black .
 
+# run data pipeline
 run:
 	@echo 🚀 Running Procedure
 	poetry run python main.py
 
+# run tweet generate and publish 
 publish:
-	@echo 📦 Publishing to twitter
-	make generate
-	make tweet
+	@echo 📣 Tweeting
+	make generate 
+	@echo Tweet insight
+	cd ./src/TweetService/ && node tweet.js
 
 tweet:
 	@echo Tweet insight
 	cd ./src/TweetService/ && node tweet.js
-	
+
 generate:
-	
+	@echo 📊 Generating Insights
+	make host &
 	@echo Remove Files in Tweets folder
 	rm -r ./src/TweetService/Tweets/* || echo dir file not found
 	@echo Generating Tweets
