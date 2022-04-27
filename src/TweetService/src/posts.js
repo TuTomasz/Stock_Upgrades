@@ -50,13 +50,14 @@ window.onload = function () {
     // iterate over object values ou data object
     for (const [ticker, insight] of Object.entries(data)) {
       console.log(`${ticker}: ${insight.Company}`);
+    
       let newTemplate = template;
       let priceTarget = "$" + insight.Price_Target;
 
       newTemplate = newTemplate.replace("ID", ticker);
       newTemplate = newTemplate.replace("TICKER", ticker);
       newTemplate = newTemplate.replace("COMPANY", insight.Company);
-      newTemplate = newTemplate.replace("SCORE", insight.Score);
+      newTemplate = newTemplate.replace("SCORE", insight.Letter_Rating);
       newTemplate = newTemplate.replace("PRICETARGET", priceTarget);
       newTemplate = newTemplate.replace("ANALYSTS", insight.Number_of_Analysts);
       newTemplate = newTemplate.replace("RATING", insight.Cumulative_Rating);

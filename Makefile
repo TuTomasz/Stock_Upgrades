@@ -39,8 +39,6 @@ tweet:
 	cd ./src/TweetService/ && node tweet.js
 
 generate:
-	@echo 📊 Generating Insights
-	make host &
 	@echo Remove Files in Tweets folder
 	rm -r ./src/TweetService/Tweets/* || echo dir file not found
 	@echo Generating Tweets

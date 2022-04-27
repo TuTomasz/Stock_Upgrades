@@ -225,6 +225,7 @@ def calculateScore(stocks):
         stocks[stock["Ticker"]]["Cumulative_Rating"] = ""
         stocks[stock["Ticker"]]["Number_of_Analysts"] = numberOfAnalysts
         stocks[stock["Ticker"]]["Period"] = "180 days"
+        stocks[stock["Ticker"]]["Letter_Rating"] = ""
 
         for analyst in stock["Rating"]:
 
@@ -246,6 +247,19 @@ def calculateScore(stocks):
             stocks[stock["Ticker"]]["Cumulative_Rating"] = "Outperform"
         elif score >= 1.5:
             stocks[stock["Ticker"]]["Cumulative_Rating"] = "Significant Outperform"
+
+        roundedScore = stocks[stock["Ticker"]]["Score"]
+
+        if roundedScore >= 1.5:
+            stocks[stock["Ticker"]]["Letter_Rating"] = "A"
+        elif roundedScore >= 0.5 and roundedScore < 1.5:
+            stocks[stock["Ticker"]]["Letter_Rating"] = "B"
+        elif roundedScore >= -0.5 and roundedScore < 0.5:
+            stocks[stock["Ticker"]]["Letter_Rating"] = "C"
+        elif roundedScore >= -1.5 and roundedScore < -0.5:
+            stocks[stock["Ticker"]]["Letter_Rating"] = "D"
+        elif roundedScore < -1.5:
+            stocks[stock["Ticker"]]["Letter_Rating"] = "E"
 
 
 def identifyAnalyst(stocks):
