@@ -70,7 +70,10 @@ puppeteer.use(
 
     // capcha solved
     await page.solveRecaptchas();
-    
+
+    await page.waitFor(5000);
+    const logginbtn = await page.$x(`//*[@id="app"]/div/div/div[4]/div[2]/div/form/div[2]/div[1]/button`)
+    logginbtn[0].click();
 
     await page.waitForNavigation();
 
@@ -92,7 +95,7 @@ puppeteer.use(
       for (const rating of queue) {
         await page.goto("https://stocktwits.com/UpgradeDowngrade");
         let ratingObject = await JSON.parse(rating);
-        let message = `$${ratingObject.Ticker} ${ratingObject.Rating.Organization} has altered their rating to "${ratingObject.Rating.Rating}" see updated analyst outlook`;
+        let message = `$${ratingObject.Ticker} ${ratingObject.Rating.Organization} has altered their rating of "${ratingObject.Rating.Rating_Change}" see updated analyst outlook`;
 
         // click on the post button
         const post = await page.$x(
