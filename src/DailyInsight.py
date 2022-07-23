@@ -297,7 +297,7 @@ def calculatePriceTarget(stocks):
             except Exception as e:
                 noTargetCount += 1
 
-        priceTarget = target / analysts - noTargetCount
+        priceTarget = target / (analysts - noTargetCount)
 
         stocks[stock["Ticker"]]["Price_Target"] = round(priceTarget, 2)
 
