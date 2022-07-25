@@ -11,7 +11,7 @@ class ProxyService:
 
     def fetchProxies(self):
 
-        url = "https://github.com/TheSpeedX/PROXY-List/blob/master/http.txt"
+        url = "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt"
 
         req = Request(url, headers={"User-Agent": "Mozilla/5.0"})
 
@@ -19,8 +19,8 @@ class ProxyService:
 
         proxy = BeautifulSoup(response, "html.parser")
 
-        for i in proxy.findAll("tr"):
-            self.proxy_list.append("http://" + i.text.replace("\n", ""))
+        for line in proxy.text.splitlines():
+            self.proxy_list.append("http://" + line)
 
         return self.proxy_list
 
@@ -28,6 +28,13 @@ class ProxyService:
         with open("data/proxy/proxy.txt", "w") as f:
             for i in self.proxy_list:
                 f.write(i + "\n")
+
+    def readProxies(self):
+        with open("data/proxy/proxy.txt", "r") as f:
+            for i in f.readlines():
+                self.proxy_list.append(i.replace("\n", ""))
+
+        return self.proxy_list
 
 
 if __name__ == "__main__":
