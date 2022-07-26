@@ -297,9 +297,16 @@ def calculatePriceTarget(stocks):
             except Exception as e:
                 noTargetCount += 1
 
-        priceTarget = target / (analysts - noTargetCount)
+        try:
 
-        stocks[stock["Ticker"]]["Price_Target"] = round(priceTarget, 2)
+            priceTarget = target / (analysts - noTargetCount)
+
+            stocks[stock["Ticker"]]["Price_Target"] = round(priceTarget, 2)
+
+        except Exception as e:
+            priceTarget = 0
+            stocks[stock["Ticker"]]["Price_Target"] = round(priceTarget, 2)
+            pass
 
 
 def generateInsight():
