@@ -16,7 +16,7 @@ AllProxies = []
 
 if __name__ == "__main__":
 
-    # # read proxy.txt file
+    # # # read proxy.txt file
     proxies = ProxyService().fetchProxies()
 
     # clear queue if one is filled
