@@ -4,7 +4,7 @@ const puppeteer = require("puppeteer-extra");
 const StealthPlugin = require("puppeteer-extra-plugin-stealth");
 puppeteer.use(StealthPlugin());
 
-const RecaptchaPlugin = require('puppeteer-extra-plugin-recaptcha')
+const RecaptchaPlugin = require("puppeteer-extra-plugin-recaptcha");
 
 // Add adblocker plugin to block all ads and trackers (saves bandwidth)
 const AdblockerPlugin = require("puppeteer-extra-plugin-adblocker");
@@ -20,10 +20,10 @@ const fs = require("fs");
 puppeteer.use(
   RecaptchaPlugin({
     provider: {
-      id: '2captcha',
+      id: "2captcha",
       token: process.env.CAPTCHA_KEY,
     },
-    visualFeedback: true // colorize reCAPTCHAs (violet = detected, green = solved)
+    visualFeedback: true, // colorize reCAPTCHAs (violet = detected, green = solved)
   })
 );
 
@@ -38,7 +38,9 @@ puppeteer.use(
 
   puppeteer.launch(chromeOptions).then(async (browser) => {
     const page = await browser.newPage();
-    await page.goto("https://stocktwits.com/");
+    await page.goto(
+      "https://stocktwits.com"
+    );
 
     // Wait for the page to load
     await page.waitFor(Math.random() * (3000 - 1000) + 1000);
@@ -55,7 +57,7 @@ puppeteer.use(
 
     //input username
     const username = await page.$x(
-      '//*[@id="app"]/div/div/div[4]/div[2]/div/form/div[1]/div[1]/label/input'
+      '//*[@id="Layout"]/div[1]/div[3]/div/div[2]/form/div[1]/input'
     );
     username[0].type(process.env.USERNAME);
 
@@ -64,15 +66,16 @@ puppeteer.use(
 
     //input password
     const password = await page.$x(
-      '//*[@id="app"]/div/div/div[4]/div[2]/div/form/div[1]/div[2]/label/input'
+      '//*[@id="Layout"]/div[1]/div[3]/div/div[2]/form/div[2]/input'
     );
     password[0].type(process.env.PASSWORD);
 
     // capcha solved
-    await page.solveRecaptchas();
+    //await page.solveRecaptchas();
 
     await page.waitFor(5000);
-    const logginbtn = await page.$x(`//*[@id="app"]/div/div/div[4]/div[2]/div/form/div[2]/div[1]/button`)
+    const logginbtn = await page.$x(`//*[@id="Layout"]/div[1]/div[3]/div/div[2]/form/button`
+    );
     logginbtn[0].click();
 
     await page.waitForNavigation();
@@ -81,10 +84,10 @@ puppeteer.use(
     await page.waitFor(Math.random() * (3000 - 1000) + 1000);
 
     // Click buttoon with inner text login
-    const elements2 = await page.$x(
-      "/html/body/div[2]/div/div/div[6]/div/div/div[2]/div/div[2]/div[1]/button[2]"
-    );
-    await elements2[0].click();
+    // const elements2 = await page.$x(
+    //   '//*[@id="Layout"]/div[1]/div[3]/div/div[2]/form/button'
+    // );
+    // await elements2[0].click();
 
     //   Read files from queue file and post them
     const queue = fs
