@@ -32,12 +32,14 @@ puppeteer.use(
   chromeOptions = {
     headless: true,
     slowMo: 10,
-    executablePath: process.env.CHROME_PATH,
-    defaultViewport: null,
+    //executablePath: process.env.CHROME_PATH,
+    //defaultViewport: 1000,
   };
 
   puppeteer.launch(chromeOptions).then(async (browser) => {
     const page = await browser.newPage();
+    await page.setViewport({ width: 1280, height: 720 });
+
     await page.goto(
       "https://stocktwits.com"
     );
@@ -46,10 +48,13 @@ puppeteer.use(
     await page.waitFor(Math.random() * (3000 - 1000) + 1000);
 
     // Click buttoon with inner text login
-
-    const elements = await page.$x(
+    // await page.screenshot({
+    //   path: 'screenshot.jpg'
+    // });   
+     const elements = await page.$x(
       '//*[@id="mainNavigation"]/div[3]/div/div/div[1]/button'
     );
+    console.log(elements)
     await elements[0].click();
 
     // Wait for the page to load
@@ -70,6 +75,9 @@ puppeteer.use(
     );
     password[0].type(process.env.PASSWORD);
 
+    // await page.screenshot({
+    //   path: 'screenshot1.jpg'
+    // });   
     // capcha solved
     //await page.solveRecaptchas();
 
@@ -100,6 +108,7 @@ puppeteer.use(
         let ratingObject = await JSON.parse(rating);
         let message = `$${ratingObject.Ticker} ${ratingObject.Rating.Organization} has altered their rating of "${ratingObject.Rating.Rating_Change}" see updated analyst outlook`;
 
+     
         // click on the post button
         const post = await page.$x(
           '//*[@id="mainNavigation"]/div[3]/span/button'
@@ -129,6 +138,10 @@ puppeteer.use(
           `//*[@id="app"]/div/div/div[3]/div[2]/div/div[2]/div/div[3]/div[1]/button`
         );
         await postButton[0].click();
+
+        // await page.screenshot({
+        //   path: 'screenshot3.jpg'
+        // });   
 
         //waitFor
         await page.waitFor(Math.random() * (3000 - 1000) + 4000);
