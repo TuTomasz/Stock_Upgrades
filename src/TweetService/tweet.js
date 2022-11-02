@@ -30,7 +30,7 @@ puppeteer.use(
 // self invoking main function
 (async () => {
   chromeOptions = {
-    headless: false,
+    headless: true,
     slowMo: 10,
     executablePath: process.env.CHROME_PATH,
     defaultViewport: null,
