@@ -48,5 +48,14 @@ host:
 	@echo 🏠 Running Host
 	cd ./src/TweetService/src/ && http-server -p 8080
 
+deploy:
+	@echo Get Latest 
+	git pull
+	@echo 📣 Tweeting
+	make generate 
+	@echo Tweet insight
+	cd ./src/TweetService/ && node tweet.js
+
+
 
 	

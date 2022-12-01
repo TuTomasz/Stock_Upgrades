@@ -29,7 +29,8 @@ const fs = require("fs");
   puppeteer.launch(chromeOptions).then(async (browser) => {
     // directory to index.html file
     const page = await browser.newPage();
-    
+    // await page.setViewport({  width: 1420,
+    //   height: 1080, });
     await page.goto("http://127.0.0.1:8080");
     
 

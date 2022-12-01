@@ -22,10 +22,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
       - name: Set up Python ${{ env.PYTHON_VERSION }}
-        uses: actions/setup-python@v2
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
-          architecture: x64
+        uses: actions/checkout@v3
       - name: Install and configure Poetry
         uses: snok/install-poetry@v1
         with:
