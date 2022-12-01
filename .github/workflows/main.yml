@@ -10,7 +10,7 @@ on:
 
 # Set python environment
 env:
-  PYTHON_VERSION: 3.9.1
+  PYTHON_VERSION: 3.9.2
   POETRY_VERSION: 1.1.11
 
 # Job Descriptions
