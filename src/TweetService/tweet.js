@@ -40,9 +40,7 @@ puppeteer.use(
     const page = await browser.newPage();
     await page.setViewport({ width: 1280, height: 720 });
 
-    await page.goto(
-      "https://stocktwits.com"
-    );
+    await page.goto("https://stocktwits.com/signin?next=/UpgradeDowngrade");
 
     // Wait for the page to load
     await page.waitFor(Math.random() * (3000 - 1000) + 1000);
@@ -50,12 +48,12 @@ puppeteer.use(
     // Click buttoon with inner text login
     // await page.screenshot({
     //   path: 'screenshot.jpg'
-    // });   
-     const elements = await page.$x(
-      '//*[@id="mainNavigation"]/div[3]/div/div/div[1]/button'
-    );
-    console.log(elements)
-    await elements[0].click();
+    // });
+    //  const elements = await page.$x(
+    //   '//*[@id="mainNavigation"]/div[3]/div/div/div[1]/button'
+    // );
+    // console.log(elements)
+    // await elements[0].click();
 
     // Wait for the page to load
     await page.waitFor(Math.random() * (3000 - 1000) + 1000);
@@ -77,12 +75,13 @@ puppeteer.use(
 
     // await page.screenshot({
     //   path: 'screenshot1.jpg'
-    // });   
+    // });
     // capcha solved
     //await page.solveRecaptchas();
 
     await page.waitFor(5000);
-    const logginbtn = await page.$x(`//*[@id="Layout"]/div[1]/div[3]/div/div[2]/form/button`
+    const logginbtn = await page.$x(
+      `//*[@id="Layout"]/div[1]/div[3]/div/div[2]/form/button`
     );
     logginbtn[0].click();
 
@@ -108,40 +107,48 @@ puppeteer.use(
         let ratingObject = await JSON.parse(rating);
         let message = `$${ratingObject.Ticker} ${ratingObject.Rating.Organization} has altered their rating of "${ratingObject.Rating.Rating_Change}" see updated analyst outlook`;
 
-     
         // click on the post button
         const post = await page.$x(
-          '//*[@id="mainNavigation"]/div[3]/span/button'
+          '//*[@id="sidebar_top_nav_id"]/div/nav/div[1]/button'
         );
         await post[0].click();
 
         // clear text in post box
-        const box = await page.$x(
-          `//*[@id="app"]/div/div/div[3]/div[2]/div/div[2]/div/div[2]/input`
-        );
+        // const box = await page.$x(
+
+        //   `/html/body/div[5]/div/div/div/div[2]/div/div/div/div/div[2]/div/div[1]`
+        // );
+
         for (let i = 0; i < 25; i++) {
           await page.keyboard.press("Backspace");
         }
+  
+        for (let i = 0; i < message.length; i++) {
+          await page.keyboard.press(message[i]);
+        }
 
-        // type message
-        await box[0].type(message);
+        // // type message
+        // await box[0].type(message);
 
         const inputbtn = await page.$x(
-          `//*[@id="app"]/div/div/div[3]/div[2]/div/div[2]/div/div[2]/div[2]/div/div[2]`
+          `/html/body/div[5]/div/div/div/div[2]/div/div/div/div/div[3]/div[2]`
         );
+
         await inputbtn[0].click();
 
         const elementHandle = await page.$("input[type=file]");
         await elementHandle.uploadFile(`./tweets/${ratingObject.Ticker}.png`);
 
+        await page.waitFor(Math.random() * (3000 - 1000) + 1000);
+
         const postButton = await page.$x(
-          `//*[@id="app"]/div/div/div[3]/div[2]/div/div[2]/div/div[3]/div[1]/button`
+          `/html/body/div[5]/div/div/div/div[2]/div/div/div/div/div[5]/div[2]/button`
         );
         await postButton[0].click();
 
         // await page.screenshot({
         //   path: 'screenshot3.jpg'
-        // });   
+        // });
 
         //waitFor
         await page.waitFor(Math.random() * (3000 - 1000) + 4000);
