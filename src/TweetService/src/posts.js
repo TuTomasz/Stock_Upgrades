@@ -1,6 +1,4 @@
 window.onload = function () {
-  console.log("loaded");
-
   async function getData() {
     const response = await fetch(
       "https://raw.githubusercontent.com/TuTomasz/Stock_Upgrades/main/Data/Queue/Insight.json"
@@ -10,13 +8,7 @@ window.onload = function () {
   }
 
   function buildHtml(data) {
-    console.log("test");
-    console.log(data);
-    console.log(data.length);
-    var size = Object.keys(data).length;
-
     let html = "";
-
     let template = `<div id="ID"class="Tweet"}>
             <h3> $TICKER - COMPANY </h3>
             
@@ -47,10 +39,9 @@ window.onload = function () {
             </div>
         </div>`;
 
-    // iterate over object values ou data object
     for (const [ticker, insight] of Object.entries(data)) {
       console.log(`${ticker}: ${insight.Company}`);
-    
+
       let newTemplate = template;
       let priceTarget = "$" + insight.Price_Target;
 
@@ -66,17 +57,11 @@ window.onload = function () {
     }
 
     return html;
-
   }
-
-  // self invoking main function
   (() => {
     getData().then((data) => {
-     let html = buildHtml(data);
+      let html = buildHtml(data);
       document.getElementsByClassName("Container")[0].innerHTML = html;
     });
   })();
-
-
-
 };

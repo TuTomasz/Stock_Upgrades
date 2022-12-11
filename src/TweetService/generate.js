@@ -1,48 +1,41 @@
+/////////////////////////////////////////////////////////////////
+///           Generate script for crating posts in PNG
+/////////////////////////////////////////////////////////////////
+
 const puppeteer = require("puppeteer-extra");
-
-// Add stealth plugin and use defaults (all tricks to hide puppeteer usage)
-const StealthPlugin = require("puppeteer-extra-plugin-stealth");
-puppeteer.use(StealthPlugin());
-
-// Add adblocker plugin to block all ads and trackers (saves bandwidth)
 const AdblockerPlugin = require("puppeteer-extra-plugin-adblocker");
+const StealthPlugin = require("puppeteer-extra-plugin-stealth");
+
+// Setup
+puppeteer.use(StealthPlugin());
 puppeteer.use(AdblockerPlugin({ blockTrackers: true }));
-
-// import env variables
 require("dotenv").config();
-
-//import file system
 const fs = require("fs");
 
-// self invoking main function
+// Main
 (async () => {
   chromeOptions = {
     headless: true,
     slowMo: 140,
     executablePath: process.env.CHROME_PATH,
-     viewport:{
+    viewport: {
       width: 1920,
       height: 1080,
-    }
+    },
   };
 
   puppeteer.launch(chromeOptions).then(async (browser) => {
-    // directory to index.html file
     const page = await browser.newPage();
-    // await page.setViewport({  width: 1420,
-    //   height: 1080, });
-    await page.goto("http://127.0.0.1:8080");
     
+    await page.goto("http://127.0.0.1:8080");
 
-    // wait for page to load
     await page.waitForSelector(".Container");
 
     const elHandleArray = await page.$$(".Tweet");
 
     for (let el of elHandleArray) {
       const id = await el.evaluate((el) => el.id);
-    
-      // generate insight png
+
       await el.screenshot({ path: `./Tweets/${id}.png` });
     }
     await browser.close();
