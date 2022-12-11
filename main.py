@@ -5,6 +5,7 @@ from src.DailyQueue import (
     populateQueueFile,
     archiveQueueFile,
 )
+from src.BestValue import findBestValue
 from src.DailyInsight import generateInsight, clearInsightFile
 from src.ProxyService import ProxyService
 
@@ -31,3 +32,5 @@ if __name__ == "__main__":
 
     # generate insights
     generateInsight()
+
+    # generate monthly insights best value
