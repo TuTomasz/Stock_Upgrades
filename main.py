@@ -5,7 +5,8 @@ from src.DailyQueue import (
     populateQueueFile,
     archiveQueueFile,
 )
-from src.BestValue import findBestValue
+
+# from src.BestValue import findBestValue
 from src.DailyInsight import generateInsight, clearInsightFile
 from src.ProxyService import ProxyService
 
