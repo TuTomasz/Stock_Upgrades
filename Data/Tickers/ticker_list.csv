@@ -202,8 +202,6 @@ F,Ford,Consumer Discretionary
 FTNT,Fortinet,Information Technology
 FTV,Fortive,Industrials
 FBHS,Fortune Brands Home & Security,Industrials
-FOXA,Fox Corporation (Class A),Communication Services
-FOX,Fox Corporation (Class B),Communication Services
 BEN,Franklin Resources,Financials
 FCX,Freeport-McMoRan,Materials
 GPS,Gap,Consumer Discretionary
@@ -265,7 +263,6 @@ JNJ,Johnson & Johnson,Health Care
 JCI,Johnson Controls,Industrials
 JPM,JPMorgan Chase,Financials
 JNPR,Juniper Networks,Information Technology
-KSU,Kansas City Southern,Industrials
 K,Kellogg's,Consumer Staples
 KEY,KeyCorp,Financials
 KEYS,Keysight Technologies,Information Technology
