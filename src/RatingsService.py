@@ -182,20 +182,19 @@ class Ratings:
         return tickerObject
 
     def format_existing_data(self, table_data):
-        # create a ne schema object
+        print(table_data)
+        # create a new schema object
         tickerObject = copy.deepcopy(self.schema)
 
         tickerObject["Updated"] = time.strftime("%Y-%m-%d %H:%M:%S")
 
-        for row in table_data:
-
+        for row in table_data[1:]:
+            print(row)
             if len(row) > 1:
                 rating_schema = self.rating_shemas.copy()
-                rating_schema["Date"] = str(
-                    datetime.datetime.strptime(
-                        str(parse(row[0])), "%Y-%m-%d %H:%M:%S"
-                    ).date()
-                )
+                date_string = row[0]
+                parsed_date = parse(date_string, fuzzy=True)
+                rating_schema["Date"] = str(parsed_date.date())
                 rating_schema["Rating"] = row[1]
                 rating_schema["Organization"] = row[2]
                 rating_schema["Rating_Change"] = row[3].replace("\u2192", "to")
