@@ -57,7 +57,7 @@ python-versions = ">=3.7.0"
 
 [[package]]
 name = "click"
-version = "8.1.4"
+version = "8.1.6"
 description = "Composable command line interface toolkit"
 category = "dev"
 optional = false
@@ -147,7 +147,7 @@ python-versions = ">=3.7"
 
 [[package]]
 name = "platformdirs"
-version = "3.8.1"
+version = "3.9.1"
 description = "A small Python package for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
 category = "dev"
 optional = false
@@ -247,37 +247,23 @@ content-hash = "3d006a9f4ac6d9f86bc386ad2715dd12eab319f7ad1a28e83f9d52882dbd4a01
 
 [metadata.files]
 beautifulsoup4 = []
-black = [
-    {file = "black-21.12b0-py3-none-any.whl", hash = "sha256:a615e69ae185e08fdd73e4715e260e2479c861b5740057fde6e8b4e3b7dd589f"},
-    {file = "black-21.12b0.tar.gz", hash = "sha256:77b80f693a569e2e527958459634f18df9b0ba2625ba4e0c2d5da5be42e6f2b3"},
-]
+black = []
 certifi = []
 charset-normalizer = []
 click = []
 colorama = []
-html-table-extractor = [
-    {file = "html_table_extractor-1.4.1-py2.py3-none-any.whl", hash = "sha256:5f3ef41aee2f2bf46400c46227b2a1b553165fb7dea00c9c41ec82c27da28a48"},
-]
+html-table-extractor = []
 idna = []
 mypy-extensions = []
 numpy = []
 pandas = []
 pathspec = []
 platformdirs = []
-python-dateutil = [
-    {file = "python-dateutil-2.8.2.tar.gz", hash = "sha256:0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86"},
-    {file = "python_dateutil-2.8.2-py2.py3-none-any.whl", hash = "sha256:961d03dc3453ebbc59dbdea9e4e11c5651520a876d0f4db161e8674aae935da9"},
-]
+python-dateutil = []
 pytz = []
 requests = []
-six = [
-    {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
-    {file = "six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
-]
+six = []
 soupsieve = []
-tomli = [
-    {file = "tomli-1.2.3-py3-none-any.whl", hash = "sha256:e3069e4be3ead9668e21cb9b074cd948f7b3113fd9c8bba083f48247aab8b11c"},
-    {file = "tomli-1.2.3.tar.gz", hash = "sha256:05b6166bff487dc068d322585c7ea4ef78deed501cc124060e0f238e89a9231f"},
-]
+tomli = []
 typing-extensions = []
 urllib3 = []
