@@ -15,13 +15,14 @@ const fs = require("fs");
 // Main
 (async () => {
   chromeOptions = {
-    headless: true,
+    headless: false,
     slowMo: 140,
     executablePath: process.env.CHROME_PATH,
     viewport: {
       width: 1920,
       height: 1080,
     },
+    
   };
 
   puppeteer.launch(chromeOptions).then(async (browser) => {
