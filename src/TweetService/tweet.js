@@ -99,9 +99,8 @@ puppeteer.use(
         }
 
         const inputbtn = await page.$x(
-          `/html/body/div[5]/div/div/div/div[2]/div/div/div/div/div[3]/div[2]`
+          "/html/body/div[5]/div/div/div/div[2]/div/div/div/div/div[3]/div[2]"
         );
-
         await inputbtn[0].click();
 
         const elementHandle = await page.$("input[type=file]");
@@ -111,7 +110,7 @@ puppeteer.use(
         await page.waitFor(Math.random() * (3000 - 1000) + 1000);
 
         const postButton = await page.$x(
-          `/html/body/div[5]/div/div/div/div[2]/div/div/div/div/div[5]/div[2]/button`
+          "/html/body/div[5]/div/div/div/div[2]/div/div/div/div/div[5]/div/button/span"
         );
         await postButton[0].click();
 

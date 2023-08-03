@@ -4,6 +4,8 @@ window.onload = function () {
       "https://raw.githubusercontent.com/TuTomasz/Stock_Upgrades/main/Data/Queue/Insight.json"
     );
     const data = await response.json();
+
+    console.log(data);
     return data;
   }
 

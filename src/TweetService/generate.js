@@ -15,7 +15,7 @@ const fs = require("fs");
 // Main
 (async () => {
   chromeOptions = {
-    headless: false,
+    headless: true,
     slowMo: 140,
     executablePath: process.env.CHROME_PATH,
     viewport: {
