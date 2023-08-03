@@ -188,19 +188,21 @@ class Ratings:
 
         tickerObject["Updated"] = time.strftime("%Y-%m-%d %H:%M:%S")
 
-        for row in table_data[1:]:
-            print(row)
-            if len(row) > 1:
-                rating_schema = self.rating_shemas.copy()
-                date_string = row[0]
-                parsed_date = parse(date_string, fuzzy=True)
-                rating_schema["Date"] = str(parsed_date.date())
-                rating_schema["Rating"] = row[1]
-                rating_schema["Organization"] = row[2]
-                rating_schema["Rating_Change"] = row[3].replace("\u2192", "to")
-                rating_schema["Target_Change"] = row[4].replace("\u2192", "to")
-                tickerObject["Rating"][uuid.uuid4()] = rating_schema
-
+        try:
+            for row in table_data[1:]:
+                print(row)
+                if len(row) > 1:
+                    rating_schema = self.rating_shemas.copy()
+                    date_string = row[0]
+                    parsed_date = parse(date_string, fuzzy=True)
+                    rating_schema["Date"] = str(parsed_date.date())
+                    rating_schema["Rating"] = row[1]
+                    rating_schema["Organization"] = row[2]
+                    rating_schema["Rating_Change"] = row[3].replace("\u2192", "to")
+                    rating_schema["Target_Change"] = row[4].replace("\u2192", "to")
+                    tickerObject["Rating"][uuid.uuid4()] = rating_schema
+        except Exception as e:
+            pass
         tickerObject["Rating"] = list(tickerObject["Rating"].values())
 
         return tickerObject
