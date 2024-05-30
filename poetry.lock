@@ -182,7 +182,7 @@ python-versions = "*"
 
 [[package]]
 name = "requests"
-version = "2.32.2"
+version = "2.32.3"
 description = "Python HTTP for Humans."
 category = "main"
 optional = false
